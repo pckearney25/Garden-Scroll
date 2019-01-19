@@ -1,0 +1,58 @@
+.intro {
+  background-color: indigo;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.parallax {
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  /* scroll (default), fixed, local (scrolls with element contents), initial, inherit*/
+  background-attachment: fixed;
+  /* left, right and center and be combined with top center and bottom*/
+  background-position: center;
+  /* repeat, repeat-x, repeat-y, no-repreat, space, round, initial, inherit*/
+  background-repeat: no-repeat;
+  /* auto (default), cover, contain, and numerical inputs.*/
+  background-size: cover;
+}
+
+#parallax-1 {
+  /* The image used */
+  background-image: url("../images/lilly.jpg");
+}
+
+#parallax-2 {
+  /* The image used */
+  background-image: url("../images/joepye.jpg");
+  position: relative;
+}
+
+#parallax-3 {
+  /* The image used */
+  background-image: url("../images/sunflowers.jpg");
+}
+
+#parallax-4 {
+  /* The image used */
+  background-image: url("../images/coneflowers.jpg");
+}
+
+.text-1,
+.text-3 {
+  background-color: palevioletred;
+  font-size: 36px;
+  padding: 50px;
+}
+
+.text-2 {
+  font-size: 36px;
+  padding: 50px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
