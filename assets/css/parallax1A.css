@@ -8,7 +8,7 @@
 
 .parallax {
   /* Set a specific height */
-  min-height: 100vh;
+  min-height: 50vh;
 
   /* Create the parallax scrolling effect */
   /* scroll (default), fixed, local (scrolls with element contents), initial, inherit*/
@@ -44,7 +44,8 @@
 
 .text-1,
 .text-3 {
-  background-color: palevioletred;
+  background-color: rgba(255, 102, 178, 1);
+  color: rgba(0, 0, 0, 1);
   font-size: 36px;
   padding: 50px;
 }
