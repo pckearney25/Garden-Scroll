@@ -8,7 +8,7 @@
 
 .parallax {
   /* Set a specific height */
-  min-height: 50vh;
+  min-height: 75vh;
 
   /* Create the parallax scrolling effect */
   /* scroll (default), fixed, local (scrolls with element contents), initial, inherit*/
@@ -56,4 +56,50 @@
   color: white;
   position: absolute;
   bottom: 0;
+}
+
+#moving-frames-div {
+  height: 100vh;
+  background-color: rgba(0, 100, 0, 1);
+  position: relative;
+}
+
+#span-box-1 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 5vh;
+  top: 10%;
+  z-index: 1;
+  border: 1px solid white;
+}
+
+#span-box-2 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 25vh;
+  top: 10%;
+  z-index: 2;
+  border: 1px solid white;
+}
+
+#span-box-3 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 45vh;
+  top: 10%;
+  z-index: 3;
+  border: 1px solid white;
+}
+
+#span-box-4 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 65vh;
+  top: 10%;
+  z-index: 4;
+  border: 1px solid white;
 }
