@@ -68,8 +68,6 @@
   width: 150px;
   height: 150px;
   position: absolute;
-  left: 5vh;
-  top: 10%;
   z-index: 1;
   border: 1px solid white;
 }
@@ -78,8 +76,6 @@
   width: 150px;
   height: 150px;
   position: absolute;
-  left: 25vh;
-  top: 10%;
   z-index: 2;
   border: 1px solid white;
 }
@@ -88,8 +84,6 @@
   width: 150px;
   height: 150px;
   position: absolute;
-  left: 45vh;
-  top: 10%;
   z-index: 3;
   border: 1px solid white;
 }
@@ -98,7 +92,7 @@
   width: 150px;
   height: 150px;
   position: absolute;
-  left: 65vh;
+  left: 71%;
   top: 10%;
   z-index: 4;
   border: 1px solid white;
