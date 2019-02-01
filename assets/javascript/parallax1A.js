@@ -1,136 +1,111 @@
-const boxColor1 = { red: 0, green: 0, blue: 0, opacity: 1 };
-const boxColor2 = { red: 255, green: 255, blue: 0, opacity: 1 };
-const boxBackGroundColor1 = { red: 255, green: 102, blue: 178, opacity: 1 };
-const boxBackGroundColor2 = { red: 71, green: 32, blue: 122, opacity: 1 };
+//Passed parameters for dynamic CSS: THE DIRECTORS:
+//start and stop refer to % of viewHeight
+const thirdBoxDirector = {
+  id: "third-box",
+  start: 75,
+  stop: 25,
+  mark: "top"
+};
 
-const spanBox1Color1 = { red: 0, green: 100, blue: 0, opacity: 1 };
-const spanBox1Color2 = { red: 71, green: 32, blue: 122, opacity: 1 };
-const spanBox1Position1 = { top: 10, left: 5, bottom: "", right: "" };
-const spanBox1Position2 = { top: 10, left: 71, bottom: "", right: "" };
+const spanBox1ColorDirector = {
+  id: "moving-frames-div",
+  start: 70,
+  stop: 65,
+  mark: "top"
+};
 
-const spanBox2Color1 = { red: 0, green: 100, blue: 0, opacity: 1 };
-const spanBox2Color2 = { red: 255, green: 255, blue: 0, opacity: 1 };
-const spanBox2Position1 = { top: 10, left: 71, bottom: "", right: "" };
-const spanBox2Position2 = { top: 75, left: 71, bottom: "", right: "" };
+const spanBox2ColorDirector = {
+  id: "moving-frames-div",
+  start: 68,
+  stop: 63,
+  mark: "top"
+};
 
-const spanBox3Color1 = { red: 0, green: 100, blue: 0, opacity: 1 };
-const spanBox3Color2 = { red: 255, green: 140, blue: 0, opacity: 1 };
-const spanBox3Position1 = { top: 75, left: 71, bottom: "", right: "" };
-const spanBox3Position2 = { top: 75, left: 5, bottom: "", right: "" };
+const spanBox3ColorDirector = {
+  id: "moving-frames-div",
+  start: 66,
+  stop: 61,
+  mark: "top"
+};
 
-const spanBox4Color1 = { red: 0, green: 100, blue: 0, opacity: 1 };
-const spanBox4Color2 = { red: 255, green: 0, blue: 0, opacity: 1 };
-const spanBox4Position1 = { top: 75, left: 5, bottom: "", right: "" };
-const spanBox4Position2 = { top: 10, left: 5, bottom: "", right: "" };
+const spanBox4ColorDirector = {
+  id: "moving-frames-div",
+  start: 64,
+  stop: 59,
+  mark: "top"
+};
+
+const spanBoxesPositionDirector = {
+  id: "moving-frames-div",
+  start: 30,
+  stop: 0,
+  mark: "top"
+};
+
+//Passed parameters for dynamic CSS: THE ACTORS:
+//Position keys refer to percentages of relative parent.
+const thirdBoxActor = {
+  id: "third-box",
+  color1: { red: 0, green: 0, blue: 0, opacity: 1 },
+  color2: { red: 255, green: 255, blue: 0, opacity: 1 },
+  background1: { red: 255, green: 102, blue: 178, opacity: 1 },
+  background2: { red: 71, green: 32, blue: 122, opacity: 1 }
+};
+
+const spanBox1Actor = {
+  id: "span-box-1",
+  background1: { red: 0, green: 100, blue: 0, opacity: 1 },
+  background2: { red: 71, green: 32, blue: 122, opacity: 1 },
+  position1: { top: 10, left: 5, bottom: "", right: "" },
+  position2: { top: 10, left: 71, bottom: "", right: "" }
+};
+
+const spanBox2Actor = {
+  id: "span-box-2",
+  background1: { red: 0, green: 100, blue: 0, opacity: 1 },
+  background2: { red: 255, green: 255, blue: 0, opacity: 1 },
+  position1: { top: 10, left: 71, bottom: "", right: "" },
+  position2: { top: 75, left: 71, bottom: "", right: "" }
+};
+
+const spanBox3Actor = {
+  id: "span-box-3",
+  background1: { red: 0, green: 100, blue: 0, opacity: 1 },
+  background2: { red: 255, green: 140, blue: 0, opacity: 1 },
+  position1: { top: 75, left: 71, bottom: "", right: "" },
+  position2: { top: 75, left: 5, bottom: "", right: "" }
+};
+
+const spanBox4Actor = {
+  id: "span-box-4",
+  background1: { red: 0, green: 100, blue: 0, opacity: 1 },
+  background2: { red: 255, green: 0, blue: 0, opacity: 1 },
+  position1: { top: 75, left: 5, bottom: "", right: "" },
+  position2: { top: 10, left: 5, bottom: "", right: "" }
+};
 
 //THIS CAN BE MADE SIMPLER BY DEFINING THE DIRECTOR FRACTIONS UP FRONT AND JUST PASSING THE VALUES DOWN.
 
 window.onscroll = function() {
-  setColor("third-box", boxColor1, boxColor2, "third-box", 75, 25, "top");
-  setBackgroundColor(
-    "third-box",
-    boxBackGroundColor1,
-    boxBackGroundColor2,
-    "third-box",
-    75,
-    25,
-    "top"
-  );
-
-  setBackgroundColor(
-    "span-box-1",
-    spanBox1Color1,
-    spanBox1Color2,
-    "moving-frames-div",
-    70,
-    65,
-    "top"
-  );
-
-  setBackgroundColor(
-    "span-box-2",
-    spanBox2Color1,
-    spanBox2Color2,
-    "moving-frames-div",
-    68,
-    63,
-    "top"
-  );
-
-  setBackgroundColor(
-    "span-box-3",
-    spanBox3Color1,
-    spanBox3Color2,
-    "moving-frames-div",
-    66,
-    61,
-    "top"
-  );
-
-  setBackgroundColor(
-    "span-box-4",
-    spanBox4Color1,
-    spanBox4Color2,
-    "moving-frames-div",
-    64,
-    59,
-    "top"
-  );
-
-  moveAbsoluteObject(
-    "span-box-1",
-    spanBox1Position1,
-    spanBox1Position2,
-    "moving-frames-div",
-    30,
-    0,
-    "top"
-  );
-
-  moveAbsoluteObject(
-    "span-box-2",
-    spanBox2Position1,
-    spanBox2Position2,
-    "moving-frames-div",
-    30,
-    0,
-    "top"
-  );
-
-  moveAbsoluteObject(
-    "span-box-3",
-    spanBox3Position1,
-    spanBox3Position2,
-    "moving-frames-div",
-    30,
-    0,
-    "top"
-  );
-
-  moveAbsoluteObject(
-    "span-box-4",
-    spanBox4Position1,
-    spanBox4Position2,
-    "moving-frames-div",
-    30,
-    0,
-    "top"
-  );
+  setColor(thirdBoxActor, thirdBoxDirector);
+  setBackgroundColor(thirdBoxActor, thirdBoxDirector);
+  setBackgroundColor(spanBox1Actor, spanBox1ColorDirector);
+  setBackgroundColor(spanBox2Actor, spanBox2ColorDirector);
+  setBackgroundColor(spanBox3Actor, spanBox3ColorDirector);
+  setBackgroundColor(spanBox4Actor, spanBox4ColorDirector);
+  moveAbsoluteObject(spanBox1Actor, spanBoxesPositionDirector);
+  moveAbsoluteObject(spanBox2Actor, spanBoxesPositionDirector);
+  moveAbsoluteObject(spanBox3Actor, spanBoxesPositionDirector);
+  moveAbsoluteObject(spanBox4Actor, spanBoxesPositionDirector);
 };
 
 //Functions to return the fractional values to control property changes.
-function cssZeroToOne(
-  directorId,
-  startviewHeightPosition,
-  stopviewHeightPosition,
-  markType
-) {
-  //(id, number input for %vh, number input for %vh, text defining id parameter for mesaurement)
+function cssZeroToOne(directParams) {
   const viewHeight = window.innerHeight;
-  const director = document.getElementById(directorId);
-  const startPosition = (startviewHeightPosition * viewHeight) / 100; //will be in px
-  const stopPosition = (stopviewHeightPosition * viewHeight) / 100; //will be in px
-  const currentPosition = director.getBoundingClientRect()[markType];
+  const director = document.getElementById(directParams.id);
+  const startPosition = (directParams.start * viewHeight) / 100; //will be in px
+  const stopPosition = (directParams.stop * viewHeight) / 100; //will be in px
+  const currentPosition = director.getBoundingClientRect()[directParams.mark];
   let fraction;
   if (currentPosition >= startPosition) {
     return (fraction = 0);
@@ -142,20 +117,15 @@ function cssZeroToOne(
   if (currentPosition <= stopPosition) {
     return (fraction = 1);
   }
+  console.log(fraction);
 }
 
-function cssOneToZero(
-  directorId,
-  startviewHeightPosition,
-  stopviewHeightPosition,
-  markType
-) {
-  //(id, number input for %vh, number input for %vh, text defining id parameter for mesaurement)
+function cssOneToZero(directParams) {
   const viewHeight = window.innerHeight;
-  const director = document.getElementById(directorId);
-  const startPosition = (startviewHeightPosition * viewHeight) / 100; //will be in px
-  const stopPosition = (stopviewHeightPosition * viewHeight) / 100; //will be in px
-  const currentPosition = director.getBoundingClientRect()[markType];
+  const director = document.getElementById(directParams.id);
+  const startPosition = (directParams.start * viewHeight) / 100; //will be in px
+  const stopPosition = (directParams.stop * viewHeight) / 100; //will be in px
+  const currentPosition = director.getBoundingClientRect()[directParams.mark];
   let fraction;
   if (currentPosition >= startPosition) {
     return (fraction = 1);
@@ -173,187 +143,157 @@ function cssOneToZero(
 //Function to set text color with cssZeroToOne function
 // The colorOneRGBA and colorTwoRGBA variables are objects of format{red: number, green: number, blue: number, opacity: number}
 //the directorId, startviewHeightPosition, stopviewHeightPosition, markType are passed through
-function setColor(
-  actorId,
-  colorOneRGBA,
-  colorTwoRGBA,
-  directorId,
-  startviewHeightPosition,
-  stopviewHeightPosition,
-  markType
-) {
-  const actor = document.getElementById(actorId);
+function setColor(actorParams, directorParams) {
+  console.log(actorParams), console.log(directorParams);
+  const actor = document.getElementById(actorParams.id);
   let redColor;
   let greenColor;
   let blueColor;
   let actorOpacity;
 
-  let colorFraction = cssZeroToOne(
-    directorId,
-    startviewHeightPosition,
-    stopviewHeightPosition,
-    markType
-  );
-
-  if (colorOneRGBA.red === colorTwoRGBA.red) {
-    redColor = colorOneRGBA.red;
+  let colorFraction = cssZeroToOne(directorParams);
+  if (actorParams.color1.red === actorParams.color2.red) {
+    redColor = actorParams.color1.red;
   } else {
     redColor =
-      colorOneRGBA.red - (colorOneRGBA.red - colorTwoRGBA.red) * colorFraction;
+      actorParams.color1.red -
+      (actorParams.color1.red - actorParams.color2.red) * colorFraction;
   }
 
-  if (colorOneRGBA.green === colorTwoRGBA.green) {
-    greenColor = colorOneRGBA.green;
+  if (actorParams.color1.green === actorParams.color2.green) {
+    greenColor = actorParams.color1.green;
   } else {
     greenColor =
-      colorOneRGBA.green -
-      (colorOneRGBA.green - colorTwoRGBA.green) * colorFraction;
+      actorParams.color1.green -
+      (actorParams.color1.green - actorParams.color2.green) * colorFraction;
   }
 
-  if (colorOneRGBA.blue === colorTwoRGBA.blue) {
-    blueColor = colorOneRGBA.blue;
+  if (actorParams.color1.blue === actorParams.color2.blue) {
+    blueColor = actorParams.color1.blue;
   } else {
     blueColor =
-      colorOneRGBA.blue -
-      (colorOneRGBA.blue - colorTwoRGBA.blue) * colorFraction;
+      actorParams.color1.blue -
+      (actorParams.color1.blue - actorParams.color2.blue) * colorFraction;
   }
 
-  if (colorOneRGBA.opacity === colorTwoRGBA.opacity) {
-    actorOpacity = colorOneRGBA.opacity;
+  if (actorParams.color1.opacity === actorParams.color2.opacity) {
+    actorOpacity = actorParams.color1.opacity;
   } else {
     actorOpacity =
-      colorOneRGBA.opacity -
-      (colorOneRGBA.opacity - colorTwoRGBA.opacity) * colorFraction;
+      actorParams.color1.opacity -
+      (actorParams.color1.opacity - actorParams.color2.opacity) * colorFraction;
   }
   actor.style.color = `rgba(${redColor}, ${greenColor}, ${blueColor}, ${actorOpacity})`;
-  console.log(`${actorId}: ${actor.style.color}`);
+  console.log(`${actorParams.id}: ${actor.style.color}`);
 }
 
 //Function to set text color with cssZeroToOne function
 // The backgroundColorOneRGBA and backgroundColorTwoRGBA variables are objects of format{red: number, green: number, blue: number, opacity: number}
 //the directorId, startviewHeightPosition, stopviewHeightPosition, markType are passed through
-function setBackgroundColor(
-  actorId,
-  backgroundColorOneRGBA,
-  backgroundColorTwoRGBA,
-  directorId,
-  startviewHeightPosition,
-  stopviewHeightPosition,
-  markType
-) {
-  const actor = document.getElementById(actorId);
+function setBackgroundColor(actorParams, directorParams) {
+  const actor = document.getElementById(actorParams.id);
   let redColor;
   let greenColor;
   let blueColor;
   let actorOpacity;
 
-  let colorFraction = cssZeroToOne(
-    directorId,
-    startviewHeightPosition,
-    stopviewHeightPosition,
-    markType
-  );
+  let colorFraction = cssZeroToOne(directorParams);
 
-  if (backgroundColorOneRGBA.red === backgroundColorTwoRGBA.red) {
-    redColor = backgroundColorOneRGBA.red;
+  if (actorParams.background1.red === actorParams.background2.red) {
+    redColor = actorParams.background1.red;
   } else {
     redColor =
-      backgroundColorOneRGBA.red -
-      (backgroundColorOneRGBA.red - backgroundColorTwoRGBA.red) * colorFraction;
+      actorParams.background1.red -
+      (actorParams.background1.red - actorParams.background2.red) *
+        colorFraction;
   }
 
-  if (backgroundColorOneRGBA.green === backgroundColorTwoRGBA) {
-    greenColor = backgroundColorOneRGBA.green;
+  if (actorParams.background1.green === actorParams.background2.green) {
+    greenColor = actorParams.background1.green;
   } else {
     greenColor =
-      backgroundColorOneRGBA.green -
-      (backgroundColorOneRGBA.green - backgroundColorTwoRGBA.green) *
+      actorParams.background1.green -
+      (actorParams.background1.green - actorParams.background2.green) *
         colorFraction;
   }
 
-  if (backgroundColorOneRGBA.blue === backgroundColorTwoRGBA.blue) {
-    blueColor = backgroundColorOneRGBA.blue;
+  if (actorParams.background1.blue === actorParams.background2.blue) {
+    blueColor = actorParams.background1.blue;
   } else {
     blueColor =
-      backgroundColorOneRGBA.blue -
-      (backgroundColorOneRGBA.blue - backgroundColorTwoRGBA.blue) *
+      actorParams.background1.blue -
+      (actorParams.background1.blue - actorParams.background2.blue) *
         colorFraction;
   }
 
-  if (backgroundColorOneRGBA.opacity === backgroundColorTwoRGBA.opacity) {
-    actorOpacity = backgroundColorOneRGBA.opacity;
+  if (actorParams.background1.opacity === actorParams.background2.opacity) {
+    actorOpacity = actorParams.background1.opacity;
   } else {
     actorOpacity =
-      backgroundColorOneRGBA.opacity -
-      (backgroundColorOneRGBA.opacity - backgroundColorTwoRGBA.opacity) *
+      actorParams.background1.opacity -
+      (actorParams.background1.opacity - actorParams.background2.opacity) *
         colorFraction;
   }
+
   actor.style.backgroundColor = `rgba(${redColor}, ${greenColor}, ${blueColor}, ${actorOpacity})`;
-  console.log(`${actorId}: ${actor.style.backgroundColor}`);
+  console.log(`${actorParams.id}: ${actor.style.color}`);
 }
 
-// The objectPositionOne & objectPositionTwo variables will have the form:
-// {top: num, left: num, bottom: num, right: num}
-//Where the numbers refer to percentages within the relative object
-function moveAbsoluteObject(
-  actorId,
-  objectPositionOne,
-  objectPositionTwo,
-  directorId,
-  startviewHeightPosition,
-  stopviewHeightPosition,
-  markType
-) {
-  const actor = document.getElementById(actorId);
+function moveAbsoluteObject(actorParams, directorParams) {
+  const actor = document.getElementById(actorParams.id);
   let top;
   let left;
   let bottom;
   let right;
 
-  let positionFraction = cssZeroToOne(
-    directorId,
-    startviewHeightPosition,
-    stopviewHeightPosition,
-    markType
-  );
-  if (objectPositionOne.top !== "" && objectPositionTwo.top !== "") {
-    if (objectPositionOne.top === objectPositionTwo.top) {
-      top = objectPositionOne.top;
+  let positionFraction = cssZeroToOne(directorParams);
+  if (actorParams.position1.top !== "" && actorParams.position2.top !== "") {
+    if (actorParams.position1.top === actorParams.position2.top) {
+      top = actorParams.position1.top;
     } else {
       top =
-        objectPositionOne.top -
-        (objectPositionOne.top - objectPositionTwo.top) * positionFraction;
-    }
-  }
-
-  if (objectPositionOne.left !== "" && objectPositionTwo.left !== "") {
-    if (objectPositionOne.left === objectPositionTwo.left) {
-      left = objectPositionOne.left;
-    } else {
-      left =
-        objectPositionOne.left -
-        (objectPositionOne.left - objectPositionTwo.left) * positionFraction;
-    }
-  }
-
-  if (objectPositionOne.bottom !== "" && objectPositionTwo.bottom !== "") {
-    if (objectPositionOne.bottom === objectPositionTwo.bottom) {
-      bottom = objectPositionOne.bottom;
-    } else {
-      bottom =
-        objectPositionOne.bottom -
-        (objectPositionOne.bottom - objectPositionTwo.bottom) *
+        actorParams.position1.top -
+        (actorParams.position1.top - actorParams.position2.top) *
           positionFraction;
     }
   }
 
-  if (objectPositionOne.right !== "" && objectPositionTwo.right !== "") {
-    if (objectPositionOne.right === objectPositionTwo.right) {
-      right = objectPositionOne.right;
+  if (actorParams.position1.left !== "" && actorParams.position2.left !== "") {
+    if (actorParams.position1.left === actorParams.position2.left) {
+      left = actorParams.position1.left;
+    } else {
+      left =
+        actorParams.position1.left -
+        (actorParams.position1.left - actorParams.position2.left) *
+          positionFraction;
+    }
+  }
+
+  if (
+    actorParams.position1.bottom !== "" &&
+    actorParams.position2.bottom !== ""
+  ) {
+    if (actorParams.position1.bottom === actorParams.position2.bottom) {
+      bottom = actorParams.position1.bottom;
+    } else {
+      bottom =
+        actorParams.position1.bottom -
+        (actorParams.position1.bottom - actorParams.position2.bottom) *
+          positionFraction;
+    }
+  }
+
+  if (
+    actorParams.position1.right !== "" &&
+    actorParams.position2.right !== ""
+  ) {
+    if (actorParams.position1.right === actorParams.position2.right) {
+      right = actorParams.position1.right;
     } else {
       right =
-        objectPositionOne.right -
-        (objectPositionOne.right - objectPositionTwo.right) * positionFraction;
+        actorParams.position1.right -
+        (actorParams.position1.right - actorParams.position2.right) *
+          positionFraction;
     }
   }
 
@@ -370,6 +310,8 @@ function moveAbsoluteObject(
     actor.style.right = `${right}%`;
   }
   console.log(
-    `${actorId}: top (${top}) left (${left}) bototom (${bottom}) right (${right})`
+    `${
+      actorParams.id
+    }: top (${top}) left (${left}) bototom (${bottom}) right (${right})`
   );
 }
