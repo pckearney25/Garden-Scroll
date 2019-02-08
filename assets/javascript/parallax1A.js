@@ -9,29 +9,29 @@ const thirdBoxDirector = {
 
 const spanBox1ColorDirector = {
   id: "moving-frames-div",
-  start: 70,
-  stop: 65,
+  start: 45,
+  stop: 40,
   mark: "top"
 };
 
 const spanBox2ColorDirector = {
   id: "moving-frames-div",
-  start: 68,
-  stop: 63,
+  start: 42,
+  stop: 37,
   mark: "top"
 };
 
 const spanBox3ColorDirector = {
   id: "moving-frames-div",
-  start: 66,
-  stop: 61,
+  start: 39,
+  stop: 34,
   mark: "top"
 };
 
 const spanBox4ColorDirector = {
   id: "moving-frames-div",
-  start: 64,
-  stop: 59,
+  start: 36,
+  stop: 31,
   mark: "top"
 };
 
@@ -39,6 +39,13 @@ const spanBoxesPositionDirector = {
   id: "moving-frames-div",
   start: 30,
   stop: 0,
+  mark: "top"
+};
+
+const circleAnimationDirector = {
+  id: "animation-div",
+  start: 70,
+  stop: 65,
   mark: "top"
 };
 
@@ -57,31 +64,55 @@ const spanBox1Actor = {
   background1: { red: 0, green: 100, blue: 0, opacity: 1 },
   background2: { red: 71, green: 32, blue: 122, opacity: 1 },
   position1: { top: 10, left: 5, bottom: "", right: "" },
-  position2: { top: 10, left: 71, bottom: "", right: "" }
+  position2: { top: 10, left: 25, bottom: "", right: "" }
 };
 
 const spanBox2Actor = {
   id: "span-box-2",
   background1: { red: 0, green: 100, blue: 0, opacity: 1 },
   background2: { red: 255, green: 255, blue: 0, opacity: 1 },
-  position1: { top: 10, left: 71, bottom: "", right: "" },
-  position2: { top: 75, left: 71, bottom: "", right: "" }
+  position1: { top: 10, left: 25, bottom: "", right: "" },
+  position2: { top: 48, left: 25, bottom: "", right: "" }
 };
 
 const spanBox3Actor = {
   id: "span-box-3",
   background1: { red: 0, green: 100, blue: 0, opacity: 1 },
   background2: { red: 255, green: 140, blue: 0, opacity: 1 },
-  position1: { top: 75, left: 71, bottom: "", right: "" },
-  position2: { top: 75, left: 5, bottom: "", right: "" }
+  position1: { top: 48, left: 25, bottom: "", right: "" },
+  position2: { top: 48, left: 5, bottom: "", right: "" }
 };
 
 const spanBox4Actor = {
   id: "span-box-4",
   background1: { red: 0, green: 100, blue: 0, opacity: 1 },
   background2: { red: 255, green: 0, blue: 0, opacity: 1 },
-  position1: { top: 75, left: 5, bottom: "", right: "" },
+  position1: { top: 48, left: 5, bottom: "", right: "" },
   position2: { top: 10, left: 5, bottom: "", right: "" }
+};
+
+const circle1Actor = {
+  id: "circle-1",
+  background1: { red: 0, green: 100, blue: 0, opacity: 1 },
+  background2: { red: 71, green: 32, blue: 122, opacity: 1 }
+};
+
+const circle2Actor = {
+  id: "circle-2",
+  background1: { red: 0, green: 100, blue: 0, opacity: 1 },
+  background2: { red: 255, green: 255, blue: 0, opacity: 1 }
+};
+
+const circle3Actor = {
+  id: "circle-3",
+  background1: { red: 0, green: 100, blue: 0, opacity: 1 },
+  background2: { red: 255, green: 140, blue: 0, opacity: 1 }
+};
+
+const circle4Actor = {
+  id: "circle-4",
+  background1: { red: 0, green: 100, blue: 0, opacity: 1 },
+  background2: { red: 255, green: 0, blue: 0, opacity: 1 }
 };
 
 //THIS CAN BE MADE SIMPLER BY DEFINING THE DIRECTOR FRACTIONS UP FRONT AND JUST PASSING THE VALUES DOWN.
@@ -97,6 +128,11 @@ window.onscroll = function() {
   moveAbsoluteObject(spanBox2Actor, spanBoxesPositionDirector);
   moveAbsoluteObject(spanBox3Actor, spanBoxesPositionDirector);
   moveAbsoluteObject(spanBox4Actor, spanBoxesPositionDirector);
+  setBackgroundColor(thirdBoxActor, thirdBoxDirector);
+  setBackgroundColor(circle1Actor, circleAnimationDirector);
+  setBackgroundColor(circle2Actor, circleAnimationDirector);
+  setBackgroundColor(circle3Actor, circleAnimationDirector);
+  setBackgroundColor(circle4Actor, circleAnimationDirector);
 };
 
 //Functions to return the fractional values to control property changes.

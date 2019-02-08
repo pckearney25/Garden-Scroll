@@ -58,8 +58,9 @@
   bottom: 0;
 }
 
-#moving-frames-div {
-  height: 100vh;
+#moving-frames-div,
+#animation-div {
+  height: 75vh;
   background-color: rgba(0, 100, 0, 1);
   position: relative;
 }
@@ -94,4 +95,23 @@
   position: absolute;
   z-index: 4;
   border: 1px solid white;
+}
+
+#animation-div {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+}
+
+.animation-box {
+  flex-grow: 1;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 15vh;
 }
