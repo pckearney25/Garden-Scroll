@@ -1,4 +1,4 @@
-//Passed parameters for dynamic CSS: THE DIRECTORS:
+//SMOOTH SCROLLING DIRECTOR OBJECTS {id: "text" , start; "number", stop: "number", mark: }
 //start and stop refer to % of viewHeight
 const thirdBoxDirector = {
   id: "third-box",
@@ -42,14 +42,16 @@ const spanBoxesPositionDirector = {
   mark: "top"
 };
 
-const circleAnimationDirector = {
+const circleAnimationDirector1 = {
+  //As above this is a simple position director.
   id: "animation-div",
-  start: 70,
-  stop: 65,
+  start: 50,
+  stop: 45,
   mark: "top"
 };
 
-//Passed parameters for dynamic CSS: THE ACTORS:
+//SMOOTH SCROLLING ACTOR OBJECTS:
+//These contain both intial and final CSS values.
 //Position keys refer to percentages of relative parent.
 const thirdBoxActor = {
   id: "third-box",
@@ -115,7 +117,19 @@ const circle4Actor = {
   background2: { red: 255, green: 0, blue: 0, opacity: 1 }
 };
 
-//THIS CAN BE MADE SIMPLER BY DEFINING THE DIRECTOR FRACTIONS UP FRONT AND JUST PASSING THE VALUES DOWN.
+//ANIMATION DIRECTOR OBJECTS {id: "text" , start; number, scrollUp: BOOLEAN, mark:"text" }
+const circleAnimationDirector2 = {
+  id: "animation-div",
+  start: 35,
+  scrollUp: true,
+  mark: "top"
+};
+//ANIMATION ACTOR OBJECTS {id: "text", upClass: "text", downClass: "text"}
+const circle1Actor2 = {
+  id: "circle-1",
+  upClass: "circle2",
+  downClass: "circle"
+};
 
 window.onscroll = function() {
   setColor(thirdBoxActor, thirdBoxDirector);
@@ -129,10 +143,11 @@ window.onscroll = function() {
   moveAbsoluteObject(spanBox3Actor, spanBoxesPositionDirector);
   moveAbsoluteObject(spanBox4Actor, spanBoxesPositionDirector);
   setBackgroundColor(thirdBoxActor, thirdBoxDirector);
-  setBackgroundColor(circle1Actor, circleAnimationDirector);
-  setBackgroundColor(circle2Actor, circleAnimationDirector);
-  setBackgroundColor(circle3Actor, circleAnimationDirector);
-  setBackgroundColor(circle4Actor, circleAnimationDirector);
+  setBackgroundColor(circle1Actor, circleAnimationDirector1);
+  setBackgroundColor(circle2Actor, circleAnimationDirector1);
+  setBackgroundColor(circle3Actor, circleAnimationDirector1);
+  setBackgroundColor(circle4Actor, circleAnimationDirector1);
+  animateObject(circle1Actor2, circleAnimationDirector2);
 };
 
 //Functions to return the fractional values to control property changes.
@@ -180,7 +195,6 @@ function cssOneToZero(directParams) {
 // The colorOneRGBA and colorTwoRGBA variables are objects of format{red: number, green: number, blue: number, opacity: number}
 //the directorId, startviewHeightPosition, stopviewHeightPosition, markType are passed through
 function setColor(actorParams, directorParams) {
-  console.log(actorParams), console.log(directorParams);
   const actor = document.getElementById(actorParams.id);
   let redColor;
   let greenColor;
@@ -220,7 +234,9 @@ function setColor(actorParams, directorParams) {
       (actorParams.color1.opacity - actorParams.color2.opacity) * colorFraction;
   }
   actor.style.color = `rgba(${redColor}, ${greenColor}, ${blueColor}, ${actorOpacity})`;
-  console.log(`${actorParams.id}: ${actor.style.color}`);
+  if (colorFraction > 0 && colorFraction < 1) {
+    console.log(`${actorParams.id}: ${actor.style.color}`);
+  }
 }
 
 //Function to set text color with cssZeroToOne function
@@ -271,8 +287,10 @@ function setBackgroundColor(actorParams, directorParams) {
         colorFraction;
   }
 
-  actor.style.backgroundColor = `rgba(${redColor}, ${greenColor}, ${blueColor}, ${actorOpacity})`;
-  console.log(`${actorParams.id}: ${actor.style.color}`);
+  actor.style.backgroundColor = `rgba(${redColor}, ${greenColor}, ${blueColor}, ${actorOpacity}`;
+  if (colorFraction > 0 && colorFraction < 1) {
+    console.log(`${actorParams.id}: ${actor.style.backgroundColor})`);
+  }
 }
 
 function moveAbsoluteObject(actorParams, directorParams) {
@@ -345,9 +363,38 @@ function moveAbsoluteObject(actorParams, directorParams) {
   if (right) {
     actor.style.right = `${right}%`;
   }
-  console.log(
-    `${
-      actorParams.id
-    }: top (${top}) left (${left}) bototom (${bottom}) right (${right})`
-  );
+  if (positionFraction > 0 && positionFraction < 1) {
+    console.log(
+      `${
+        actorParams.id
+      }: top (${top}) left (${left}) bototom (${bottom}) right (${right})`
+    );
+  }
+}
+
+function animateObject(animActParams, animDirectParams) {
+  const viewHeight = window.innerHeight;
+  const director = document.getElementById(animDirectParams.id);
+  const startPosition = (animDirectParams.start * viewHeight) / 100; //will be in px
+  const currentPosition = director.getBoundingClientRect()[
+    animDirectParams.mark
+  ];
+
+  if (animDirectParams.scrollUp && currentPosition <= startPosition) {
+    document.getElementById(animActParams.id).className = animActParams.upClass;
+  }
+
+  if (animDirectParams.scrollUp && currentPosition > startPosition) {
+    document.getElementById(animActParams.id).className =
+      animActParams.downClass;
+  }
+
+  if (!animDirectParams.scrollUp && currentPosition >= startPosition) {
+    document.getElementById(animActParams.id).className =
+      animActParams.downClass;
+  }
+
+  if (!animDirectParams.scrollUp && currentPosition < startPosition) {
+    document.getElementById(animActParams.id).className = animActParams.upClass;
+  }
 }
