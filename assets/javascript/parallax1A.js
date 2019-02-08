@@ -125,9 +125,27 @@ const circleAnimationDirector2 = {
   mark: "top"
 };
 //ANIMATION ACTOR OBJECTS {id: "text", upClass: "text", downClass: "text"}
-const circle1Actor2 = {
+const circle1ActorB = {
   id: "circle-1",
-  upClass: "circle2",
+  upClass: "bloom1",
+  downClass: "circle"
+};
+
+const circle2ActorB = {
+  id: "circle-2",
+  upClass: "bloom2",
+  downClass: "circle"
+};
+
+const circle3ActorB = {
+  id: "circle-3",
+  upClass: "bloom3",
+  downClass: "circle"
+};
+
+const circle4ActorB = {
+  id: "circle-4",
+  upClass: "bloom4",
   downClass: "circle"
 };
 
@@ -147,7 +165,10 @@ window.onscroll = function() {
   setBackgroundColor(circle2Actor, circleAnimationDirector1);
   setBackgroundColor(circle3Actor, circleAnimationDirector1);
   setBackgroundColor(circle4Actor, circleAnimationDirector1);
-  animateObject(circle1Actor2, circleAnimationDirector2);
+  animateObject(circle1ActorB, circleAnimationDirector2);
+  animateObject(circle2ActorB, circleAnimationDirector2);
+  animateObject(circle3ActorB, circleAnimationDirector2);
+  animateObject(circle4ActorB, circleAnimationDirector2);
 };
 
 //Functions to return the fractional values to control property changes.
