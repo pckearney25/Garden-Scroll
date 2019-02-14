@@ -58,8 +58,7 @@
   bottom: 0;
 }
 
-#moving-frames-div,
-#animation-div {
+#moving-frames-div {
   height: 75vh;
   background-color: rgba(0, 100, 0, 1);
   position: relative;
@@ -98,6 +97,9 @@
 }
 
 #animation-div {
+  height: 75vh;
+  background-color: rgba(0, 100, 0, 1);
+  position: relative;
   display: flex;
   justify-content: space-around;
   flex-flow: row nowrap;
