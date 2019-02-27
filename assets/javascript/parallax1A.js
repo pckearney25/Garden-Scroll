@@ -13,8 +13,8 @@ const spanBoxDirector = {
 };
 
 const animationBoxDirector = {
-  scroll1: { id: "animation-div", start: 50, stop: 45, mark: "top" },
-  animation1: { id: "animation-div", start: 35, scrollUp: true, mark: "top" }
+  scroll1: { id: "animation-div", start: 70, stop: 55, mark: "top" },
+  animation1: { id: "animation-div", start: 52, scrollUp: true, mark: "top" }
 };
 
 //SMOOTH SCROLLING ACTOR OBJECTS:
@@ -22,10 +22,10 @@ const animationBoxDirector = {
 //Position keys refer to percentages of relative parent.
 const thirdBoxActor = {
   id: "third-box",
-  color1: { red: 0, green: 0, blue: 0, opacity: 1 },
-  color2: { red: 255, green: 255, blue: 0, opacity: 1 },
-  background1: { red: 255, green: 102, blue: 178, opacity: 1 },
-  background2: { red: 71, green: 32, blue: 122, opacity: 1 }
+  color1: { red: 255, green: 255, blue: 0, opacity: 1 },
+  color2: { red: 71, green: 32, blue: 122, opacity: 1 },
+  background1: { red: 71, green: 32, blue: 122, opacity: 1 },
+  background2: { red: 255, green: 255, blue: 0, opacity: 1 }
 };
 
 const spanBox1Actor = {

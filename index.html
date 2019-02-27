@@ -6,11 +6,25 @@
     <title>Parallax-1A</title>
     <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/parallax1A.css" type="text/css" />
+    <script src="assets/javascript/scroll-functions.js"></script>
+    <script src="assets/javascript/parallax1A.js"></script>
   </head>
 
   <body>
     <div class="intro"><p>The Fabulous Missouri Botanical Gardens.</p></div>
 
+    <div class="slideshow-container">
+      <figure class="slide-1"></figure>
+      <figure class="slide-2"></figure>
+      <figure class="slide-3"></figure>
+      <figure class="slide-4"></figure>
+    </div>
+    <div class="text-3" id="third-box">
+      These are photos from my visit to the Missouri Botanical Gardens in St.
+      Louis in July of 2018. The gardens are a magical place of good design and
+      serve as an inspiration to millions of gardeners, naturalists, an
+      botanists.
+    </div>
     <div class="parallax" id="parallax-1"></div>
 
     <div class="text-1">
@@ -55,23 +69,23 @@
       <span id="span-box-3"></span> <span id="span-box-4"></span>
     </div>
 
-    <div class="parallax" id="parallax-4"></div>
-    <script src="assets/javascript/scroll-functions.js"></script>
-    <script src="assets/javascript/parallax1A.js"></script>
-  </body>
+    <div class="zoom-transition-div">
+      <div class="zoom-out-div"></div>
+    </div>
 
-  <div id="animation-div">
-    <div class="animation-box">
-      <div class="circle" id="circle-1"></div>
+    <div id="animation-div">
+      <div class="animation-box">
+        <div class="circle" id="circle-1"></div>
+      </div>
+      <div class="animation-box">
+        <div class="circle" id="circle-2"></div>
+      </div>
+      <div class="animation-box">
+        <div class="circle" id="circle-3"></div>
+      </div>
+      <div class="animation-box">
+        <div class="circle" id="circle-4"></div>
+      </div>
     </div>
-    <div class="animation-box">
-      <div class="circle" id="circle-2"></div>
-    </div>
-    <div class="animation-box">
-      <div class="circle" id="circle-3"></div>
-    </div>
-    <div class="animation-box">
-      <div class="circle" id="circle-4"></div>
-    </div>
-  </div>
+  </body>
 </html>
