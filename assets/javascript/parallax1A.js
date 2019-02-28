@@ -1,7 +1,7 @@
 //SMOOTH SCROLLING DIRECTOR OBJECTS {id: "text" , start; "number", stop: "number", mark: }
 //start and stop refer to % of viewHeight
-const thirdBoxDirector = {
-  scroll1: { id: "third-box", start: 75, stop: 25, mark: "top" }
+const firstBoxDirector = {
+  scroll1: { id: "first-box", start: 75, stop: 25, mark: "top" }
 };
 
 const spanBoxDirector = {
@@ -20,8 +20,8 @@ const animationBoxDirector = {
 //SMOOTH SCROLLING ACTOR OBJECTS:
 //These contain both intial and final CSS values.
 //Position keys refer to percentages of relative parent.
-const thirdBoxActor = {
-  id: "third-box",
+const firstBoxActor = {
+  id: "first-box",
   color1: { red: 255, green: 255, blue: 0, opacity: 1 },
   color2: { red: 71, green: 32, blue: 122, opacity: 1 },
   background1: { red: 71, green: 32, blue: 122, opacity: 1 },
@@ -117,8 +117,8 @@ const circle4ActorB = {
 };
 
 window.onscroll = function() {
-  setColor(thirdBoxActor, thirdBoxDirector.scroll1);
-  setBackgroundColor(thirdBoxActor, thirdBoxDirector.scroll1);
+  setColor(firstBoxActor, firstBoxDirector.scroll1);
+  setBackgroundColor(firstBoxActor, firstBoxDirector.scroll1);
   setBackgroundColor(spanBox1Actor, spanBoxDirector.scroll1);
   setBackgroundColor(spanBox2Actor, spanBoxDirector.scroll2);
   setBackgroundColor(spanBox3Actor, spanBoxDirector.scroll3);
@@ -127,7 +127,6 @@ window.onscroll = function() {
   moveAbsoluteObject(spanBox2Actor, spanBoxDirector.position1);
   moveAbsoluteObject(spanBox3Actor, spanBoxDirector.position1);
   moveAbsoluteObject(spanBox4Actor, spanBoxDirector.position1);
-  setBackgroundColor(thirdBoxActor, thirdBoxDirector.scroll1);
   setBackgroundColor(circle1Actor, animationBoxDirector.scroll1);
   setBackgroundColor(circle2Actor, animationBoxDirector.scroll1);
   setBackgroundColor(circle3Actor, animationBoxDirector.scroll1);

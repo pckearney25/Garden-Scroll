@@ -1,9 +1,28 @@
+body {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+hr {
+  border-color: rgba(255, 255, 0, 1);
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
 .intro {
   background-color: indigo;
-  font-size: 36px;
   color: rgba(255, 255, 0, 1);
   text-align: center;
-  padding: 20px;
+  padding: 1.2rem;
 }
 
 .slideshow-container {
@@ -31,38 +50,32 @@ figure {
 .slide-1 {
   opacity: 1;
   background: url("../images/dome.jpg") no-repeat center center;
-  -webkit-background-size: cover;
   background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .slide-2 {
   animation-delay: 6s;
   -o-animation-delay: 6s;
-  -moz--animation-delay: 6s;
-  -webkit-animation-delay: 6s;
   background: url("../images/greenhouse.jpg") no-repeat center center;
-  -webkit-background-size: cover;
   background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .slide-3 {
   animation-delay: 12s;
-  -o-animation-delay: 12s;
-  -moz--animation-delay: 12s;
   -webkit-animation-delay: 12s;
   background: url("../images/observatory.jpg") no-repeat center center;
-  -webkit-background-size: cover;
   background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .slide-4 {
   animation-delay: 18s;
-  -o-animation-delay: 18s;
-  -moz--animation-delay: 18s;
   -webkit-animation-delay: 18s;
   background: url("../images/japanese-garden.jpg") no-repeat center center;
-  -webkit-background-size: cover;
   background-size: cover;
+  -webkit-background-size: cover;
 }
 /* keyframes*/
 
@@ -113,6 +126,7 @@ figure {
 
 .parallax {
   /* Set a specific height */
+  position: relative;
   min-height: 60vh;
 
   /* Create the parallax scrolling effect */
@@ -134,7 +148,6 @@ figure {
 #parallax-2 {
   /* The image used */
   background-image: url("../images/joepye.jpg");
-  position: relative;
 }
 
 #parallax-3 {
@@ -145,6 +158,51 @@ figure {
 #parallax-4 {
   /* The image used */
   background-image: url("../images/coneflowers.jpg");
+}
+
+.sliding-background-container {
+  height: 60vh;
+  overflow: hidden;
+}
+
+.sliding-background {
+  background: url("../images/grove-house.jpg") no-repeat;
+  background-size: cover;
+  background-position: left center;
+  min-height: 100%;
+
+  animation: xslide 60s linear infinite alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes xslide {
+  0% {
+    background-position: left center;
+  }
+  5% {
+    background-position: left center;
+  }
+  95% {
+    background-position: right center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+
+@keyframes xslide {
+  0% {
+    background-position: left center;
+  }
+  5% {
+    background-position: left center;
+  }
+  95% {
+    background-position: right center;
+  }
+  100% {
+    background-position: right center;
+  }
 }
 
 .zoom-transition-div {
@@ -173,20 +231,24 @@ figure {
   transform-origin: center bottom;
 }
 
-.text-1,
-.text-3 {
+.comment-box,
+#text-3 {
   color: rgba(255, 255, 0, 1);
   background: rgba(71, 32, 122, 1);
-  font-size: 36px;
-  padding: 50px;
+  padding: 1.8rem;
 }
 
-.text-2 {
-  font-size: 36px;
-  padding: 50px;
-  color: white;
+.parallax-comment-box {
+  margin: 0;
+  width: 50%;
+  color: #c20176;
+  background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 1.8rem;
 }
 
 #moving-frames-div {
