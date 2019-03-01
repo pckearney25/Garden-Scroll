@@ -14,7 +14,7 @@ hr {
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-style: italic;
 }
 
@@ -22,13 +22,21 @@ h4 {
   background-color: indigo;
   color: rgba(255, 255, 0, 1);
   text-align: center;
-  padding: 1.2rem;
+  padding: 1rem;
+}
+
+#intro-comment-box {
+  color: rgba(71, 32, 122, 1);
+  background: rgba(255, 255, 0, 1);
+  padding: 0.8rem;
+  text-align: center;
 }
 
 .slideshow-container {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
+  background-color: lightgray;
   overflow: hidden;
 }
 
@@ -124,6 +132,12 @@ figure {
   }
 }
 
+.comment-box,
+#text-3 {
+  color: rgba(255, 255, 0, 1);
+  background: rgba(71, 32, 122, 1);
+  padding: 1.8rem;
+}
 .parallax {
   /* Set a specific height */
   position: relative;
@@ -157,7 +171,21 @@ figure {
 
 #parallax-4 {
   /* The image used */
-  background-image: url("../images/coneflowers.jpg");
+  background-image: url("../images/sunflowers.jpg");
+}
+
+.parallax-comment-box {
+  margin: 0;
+  width: 50%;
+  color: #c20176;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 1.8rem;
+  z-index: 1;
 }
 
 .sliding-background-container {
@@ -205,56 +233,31 @@ figure {
   }
 }
 
-.zoom-transition-div {
-  height: 60vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.zoom-out-div {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/bald-cypress.jpg");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.zoom-in-div {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/bald-cypress.jpg");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: scale(1.5);
-  transform-origin: center bottom;
-}
-
-.comment-box,
-#text-3 {
-  color: rgba(255, 255, 0, 1);
-  background: rgba(71, 32, 122, 1);
-  padding: 1.8rem;
-}
-
-.parallax-comment-box {
-  margin: 0;
-  width: 50%;
-  color: #c20176;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding: 1.8rem;
-}
-
 #moving-frames-div {
   height: 75vh;
   background-color: rgba(0, 100, 0, 1);
   position: relative;
+}
+
+.video-parallax {
+  position: relative;
+  /* Set a specific height */
+  height: 100vh;
+  background-image: url("../images/coneflowers.jpg");
+  background-size: cover;
+  overflow: hidden;
+  z-index: -30;
+}
+
+#bee-video {
+  position: fixed;
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: -29;
 }
 
 #span-box-1 {
