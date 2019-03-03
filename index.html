@@ -28,7 +28,7 @@
       <figure class="slide-3"></figure>
       <figure class="slide-4"></figure>
     </div>
-    <div class="comment-box" id="first-box">
+    <div class="comment-box" id="first-js-box">
       The garden has inspired visitors for over 160 years. I wanted to convey a
       sense of that inspiration here through the magic of CSS and JavaScript.
       The slideshow above is achieved by the combination of the CSS animation
@@ -64,9 +64,8 @@
       <!--Here positioning it, when the texts extends beyond the vh, the image doesn't "move"-->
       <!--Next week I want the text to scroll with the window. (scroll within a scroll)-->
       <div class="parallax-comment-box">
-        Design Tip: The grouping of elements can create a more dramatic effect,
-        like a slideshow of images or these groupings of pollinator-friendly Joe
-        Pye weed, rudbeckia, and lillies.
+        Design Tip: Grouping of elements can create a more dramatic effect, like
+        a slideshow of images or a collection of pollinator-friendly plants.
       </div>
     </div>
     <div class="comment-box">
@@ -83,20 +82,20 @@
 
     <div class="comment-box">
       Immediately above and below this box, the code for the classic parallax
-      effect is repeated with only a text change to the lower "Design Tip Box"
-      in order to create what appears to be a much bigger parallax effect.
+      effect is repeated with only text changes to the "Design Tip" boxes in
+      order to create what appears to be a much bigger parallax effect.
     </div>
 
     <div class="parallax" id="parallax-4">
       <div class="parallax-comment-box">
-        Design Tip: The effects should support your message, not overwhelm it.
+        Design Tip: The effects should support the message, not overwhelm it.
       </div>
     </div>
 
     <div class="comment-box">
-      Garden and web design constantly change. The introduction of new varietals
-      like the red coneflowers in the image above and the video background in
-      the parallax image below, can make the familiar seem new again.
+      Garden and web design constantly change. The introduction of new
+      varietals, like the red coneflowers in the image above and the video
+      background in the parallax below, can make the familiar seem new again.
     </div>
 
     <div class="video-parallax">
@@ -104,28 +103,54 @@
         <source src="./assets/movies/bee-bee-movie.mp4" type="video/mp4" />
       </video>
       <div class="parallax-comment-box">
-        Design Tip: The effects should support your message, not overwhelm it.
+        Design Tip: Code with the users' eperience in mind. You want to attract
+        them like the bees to this bee bee tree.
       </div>
     </div>
 
-    <div id="moving-frames-div">
-      <span id="span-box-1"></span> <span id="span-box-2"></span>
-      <span id="span-box-3"></span> <span id="span-box-4"></span>
+    <div class="comment-box" id="second-js-box">
+      Today more and more sites incorporate styling effects that are produced
+      when the user scrolls to a specific location on the page. There are two
+      types: abrupt and progressive effects.
     </div>
 
-    <div id="animation-div">
-      <div class="animation-box">
-        <div class="circle" id="circle-1"></div>
-      </div>
-      <div class="animation-box">
-        <div class="circle" id="circle-2"></div>
-      </div>
-      <div class="animation-box">
-        <div class="circle" id="circle-3"></div>
-      </div>
-      <div class="animation-box">
-        <div class="circle" id="circle-4"></div>
+    <div class="effect-container" id="abrupt-demo-container">
+      <div class="effect-header">Abrupt Scrolling Effects</div>
+      <div id="animation-div">
+        <div class="animation-box">
+          <div class="circle" id="circle-1"></div>
+        </div>
+        <div class="animation-box">
+          <div class="circle" id="circle-2"></div>
+        </div>
+        <div class="animation-box">
+          <div class="circle" id="circle-3"></div>
+        </div>
+        <div class="animation-box">
+          <div class="circle" id="circle-4"></div>
+        </div>
       </div>
     </div>
+
+    <div class="comment-box" id="third-js-box">
+      Abrupt Effects: When an element reaches a certain position on the page, an
+      animation, transition, or transformation is triggerd in a second element.
+      A simple way to do this is to use JavaScript to change the class or id
+      attribute of the second element.
+    </div>
+    <div class="effect-container" id="progressive-demo-container">
+      <div class="effect-header">Progressive Scrolling Effects</div>
+      <div id="moving-frames-div">
+        <span id="span-box-1">1</span> <span id="span-box-2">2</span>
+        <span id="span-box-3">3</span> <span id="span-box-4">4</span>
+      </div>
+    </div>
+
+    <div class="comment-box" id="fourth-js-box">
+      Progressive Effects: As an element moves between two predefined positions
+      on the page, JavaScript is used to enact a gradual change in the CSS
+      styling of a second element.
+    </div>
+    <div class="final-div"></div>
   </body>
 </html>

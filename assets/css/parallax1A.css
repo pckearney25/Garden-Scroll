@@ -34,7 +34,7 @@ h4 {
 
 .slideshow-container {
   position: relative;
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   background-color: lightgray;
   overflow: hidden;
@@ -141,7 +141,7 @@ figure {
 .parallax {
   /* Set a specific height */
   position: relative;
-  min-height: 60vh;
+  min-height: 50vh;
 
   /* Create the parallax scrolling effect */
   /* scroll (default), fixed, local (scrolls with element contents), initial, inherit*/
@@ -161,7 +161,7 @@ figure {
 
 #parallax-2 {
   /* The image used */
-  background-image: url("../images/joepye.jpg");
+  background-image: url("../images/sunflowers.jpg");
 }
 
 #parallax-3 {
@@ -233,12 +233,6 @@ figure {
   }
 }
 
-#moving-frames-div {
-  height: 75vh;
-  background-color: rgba(0, 100, 0, 1);
-  position: relative;
-}
-
 .video-parallax {
   position: relative;
   /* Set a specific height */
@@ -260,46 +254,26 @@ figure {
   z-index: -29;
 }
 
-#span-box-1 {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  z-index: 1;
-  border: 1px solid white;
+.effect-container {
+  background-color: rgba(0, 100, 0, 1);
 }
-
-#span-box-2 {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  z-index: 2;
-  border: 1px solid white;
-}
-
-#span-box-3 {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  z-index: 3;
-  border: 1px solid white;
-}
-
-#span-box-4 {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  z-index: 4;
-  border: 1px solid white;
+.effect-header {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  padding-top: 1.5rem;
 }
 
 #animation-div {
-  height: 50vh;
-  background-color: rgba(0, 100, 0, 1);
+  height: 30vh;
+  width: 90%;
+  margin: 0 auto;
   position: relative;
   display: flex;
   justify-content: space-around;
   flex-flow: row nowrap;
   align-items: center;
+  padding-bottom: 1.5rem;
 }
 
 .animation-box {
@@ -643,4 +617,35 @@ figure {
     width: 80px;
     height: 80px;
   }
+}
+
+#progressive-demo-container {
+  height: 75vh;
+  position: relative;
+}
+#moving-frames-div {
+  height: 300px;
+  width: 300px;
+  background-color: rgba(0, 100, 0, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#span-box-1,
+#span-box-2,
+#span-box-3,
+#span-box-4 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 1px solid white;
+}
+
+.final-div {
+  height: 75vh;
+  background-color: rgba(0, 100, 0, 1);
+  background: white url("../images/joepye.jpg") center/cover no-repeat fixed;
 }
