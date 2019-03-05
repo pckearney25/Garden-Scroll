@@ -620,7 +620,7 @@ figure {
 }
 
 #progressive-demo-container {
-  height: 75vh;
+  height: 60vh;
   position: relative;
 }
 #moving-frames-div {
@@ -644,8 +644,36 @@ figure {
   border: 1px solid white;
 }
 
+.movie-set-flex-container {
+  background-color: green;
+}
+
+.movie-image {
+  background-color: navy;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 50vh;
+}
+
+.movie-image img:first-child {
+  width: 27.5%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+.movie-image img:nth-child(2) {
+  width: 45.5%;
+  height: 100%;
+  mix-blend-mode: normal;
+}
+.movie-image img:last-child {
+  width: 25%;
+  height: 100%;
+  mix-blend-mode: darken;
+}
+
 .final-div {
-  height: 75vh;
+  height: 100vh;
   background-color: rgba(0, 100, 0, 1);
   background: white url("../images/joepye.jpg") center/cover no-repeat fixed;
 }
