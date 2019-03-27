@@ -104,29 +104,41 @@ const circleActor = {
     id: "circle-1",
     background1: { red: 0, green: 100, blue: 0, opacity: 1 },
     background2: { red: 71, green: 32, blue: 122, opacity: 1 },
-    upClass: "bloom1",
-    downClass: "circle"
+    //triggers the scroll-up animation
+    upAddClass: "bloom1",
+    //class that will replace the current classList on scroll-up animation completion
+    upEndClass: "circle2",
+    //triggers the scroll-down animation
+    downAddClass: "wilt",
+    //class that will replace the current classList on scroll-down animation completion
+    downEndClass: "circle"
   },
   circle2: {
     id: "circle-2",
     background1: { red: 0, green: 100, blue: 0, opacity: 1 },
     background2: { red: 255, green: 255, blue: 0, opacity: 1 },
-    upClass: "bloom2",
-    downClass: "circle"
+    upAddClass: "bloom2",
+    upEndClass: "circle2",
+    downAddClass: "wilt",
+    downEndClass: "circle"
   },
   circle3: {
     id: "circle-3",
     background1: { red: 0, green: 100, blue: 0, opacity: 1 },
     background2: { red: 255, green: 140, blue: 0, opacity: 1 },
-    upClass: "bloom3",
-    downClass: "circle"
+    upAddClass: "bloom3",
+    upEndClass: "circle2",
+    downAddClass: "wilt",
+    downEndClass: "circle"
   },
   circle4: {
     id: "circle-4",
     background1: { red: 0, green: 100, blue: 0, opacity: 1 },
     background2: { red: 255, green: 0, blue: 0, opacity: 1 },
-    upClass: "bloom4",
-    downClass: "circle"
+    upAddClass: "bloom4",
+    upEndClass: "circle2",
+    downAddClass: "wilt",
+    downEndClass: "circle"
   }
 };
 

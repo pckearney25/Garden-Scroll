@@ -221,6 +221,7 @@ const moveAbsoluteObject = (actorParams, directorParams) => {
 };
 
 //Functions to activate animations by changing class when director div hits its mark.
+//Set state of animation to activate on scrollup/down)
 const animateObject = (animActParams, animDirectParams) => {
   const viewHeight = window.innerHeight;
   const director = document.getElementById(animDirectParams.id);
@@ -228,22 +229,30 @@ const animateObject = (animActParams, animDirectParams) => {
   const currentPosition = director.getBoundingClientRect()[
     animDirectParams.mark
   ];
-
+  //Resets the class of an element and resets the conditions of the next effect to occur on scroll down.
+  const upEndFunction = () => {
+    document.getElementById(animActParams.id).className =
+      animActParams.upEndClass;
+    animDirectParams.scrollUp = false;
+  };
+  //Resets the class of an element and resets the conditions of the next effect to occur on scroll up.
+  const downEndFunction = () => {
+    document.getElementById(animActParams.id).className =
+      animActParams.downEndClass;
+    animDirectParams.scrollUp = true;
+  };
+  //triggers the effect on scroll up by adding a class then calls the upEndFunction to reset the class of an element.
   if (animDirectParams.scrollUp && currentPosition <= startPosition) {
-    document.getElementById(animActParams.id).className = animActParams.upClass;
+    const actor = document.getElementById(animActParams.id);
+    actor.classList.add(animActParams.upAddClass);
+    actor.addEventListener("webkitAnimationEnd", upEndFunction);
+    actor.addEventListener("animationend", upEndFunction);
   }
-
-  if (animDirectParams.scrollUp && currentPosition > startPosition) {
-    document.getElementById(animActParams.id).className =
-      animActParams.downClass;
-  }
-
-  if (!animDirectParams.scrollUp && currentPosition >= startPosition) {
-    document.getElementById(animActParams.id).className =
-      animActParams.downClass;
-  }
-
-  if (!animDirectParams.scrollUp && currentPosition < startPosition) {
-    document.getElementById(animActParams.id).className = animActParams.upClass;
+  //triggers the effect on scroll down by adding a class then calls the upEndFunction to reset the class of an element.
+  if (!animDirectParams.scrollUp && currentPosition > startPosition) {
+    const actor = document.getElementById(animActParams.id);
+    actor.classList.add(animActParams.downAddClass);
+    actor.addEventListener("webkitAnimationEnd", downEndFunction);
+    actor.addEventListener("animationend", downEndFunction);
   }
 };

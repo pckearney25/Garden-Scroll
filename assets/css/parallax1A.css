@@ -289,14 +289,16 @@ figure {
   margin: 0 auto;
 }
 
-.bloom1 {
-  width: 10px;
-  height: 10px;
+.circle2 {
+  width: 80px;
+  height: 80px;
   border: 1px solid white;
   border-radius: 50%;
   margin: 0 auto;
+}
 
-  -webkit-animation: bloom1 3s; /* Safari 4.0 - 8.0 */
+.bloom1 {
+  -webkit-animation: bloom1 2s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation: bloom1 2s;
   animation-fill-mode: forwards;
@@ -326,12 +328,6 @@ figure {
 }
 
 .bloom2 {
-  width: 10px;
-  height: 10px;
-  border: 1px solid white;
-  border-radius: 50%;
-  margin: 0 auto;
-
   -webkit-animation: bloom2 2s 0.5s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
 
@@ -445,13 +441,6 @@ figure {
 }
 
 .bloom3 {
-  width: 10px;
-  height: 10px;
-  border: 1px solid white;
-  border-radius: 50%;
-  margin: 0 auto;
-  margin-bottom: 0px;
-
   -webkit-animation: bloom3 2s 0.75s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation: bloom3 2s 0.75s;
@@ -584,12 +573,6 @@ figure {
 }
 
 .bloom4 {
-  width: 10px;
-  height: 10px;
-  border: 1px solid white;
-  border-radius: 50%;
-  margin: 0 auto;
-
   -webkit-animation: bloom4 2s 0.5s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation: bloom4 2s 0.5s;
@@ -619,6 +602,36 @@ figure {
   }
 }
 
+.wilt {
+  -webkit-animation: wilt 2s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation: wilt 2s;
+  animation-fill-mode: forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes wilt {
+  from {
+    width: 80px;
+    height: 80px;
+  }
+  to {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@keyframes wilt {
+  from {
+    width: 80px;
+    height: 80px;
+  }
+  to {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 #progressive-demo-container {
   height: 60vh;
   position: relative;
@@ -644,34 +657,65 @@ figure {
   border: 1px solid white;
 }
 
-.movie-set-flex-container {
+#film-set-flex-container {
   background-color: green;
 }
 
-.movie-image {
+.film-image {
   background-color: navy;
+  width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   height: 50vh;
 }
 
-.movie-image img:first-child {
+#camera-man {
   width: 27.5%;
   height: 100%;
-  mix-blend-mode: multiply;
 }
-.movie-image img:nth-child(2) {
+#actors {
   width: 45.5%;
   height: 100%;
-  mix-blend-mode: normal;
 }
-.movie-image img:last-child {
-  width: 25%;
+#director {
+  width: 27%;
   height: 100%;
-  mix-blend-mode: darken;
 }
 
+.dark {
+  mix-blend-mode: multiply;
+}
+
+.lit {
+  mix-blend-mode: normal;
+}
+
+.spotlight1 {
+  -webkit-animation: spotlight1 2s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation: spotlight1 2s;
+  animation-fill-mode: forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes spotlight1 {
+  from {
+    mix-blend-mode: multiply;
+  }
+  to {
+    mix-blend-mode: normal;
+  }
+}
+
+@keyframes spotlight1 {
+  from {
+    mix-blend-mode: multiply;
+  }
+  to {
+    mix-blend-mode: normal;
+  }
+}
 .final-div {
   height: 100vh;
   background-color: rgba(0, 100, 0, 1);
