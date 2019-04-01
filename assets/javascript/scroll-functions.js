@@ -256,3 +256,33 @@ const animateObject = (animActParams, animDirectParams) => {
     actor.addEventListener("animationend", downEndFunction);
   }
 };
+
+const moveBackgroundPosition = (actorParams, directorParams) => {
+  const actor = document.getElementById(actorParams.id);
+  let xPosition;
+  let yPosition;
+
+  let moveFraction = cssZeroToOne(directorParams);
+  if (actorParams.backgroundPosition1.x === actorParams.backgroundPosition2.x) {
+    xPosition = actorParams.backgroundPosition1.x;
+  } else {
+    xPosition =
+      actorParams.backgroundPosition1.x -
+      (actorParams.backgroundPosition1.x - actorParams.backgroundPosition1.x) *
+        moveFraction;
+  }
+
+  if (actorParams.backgroundPosition1.y === actorParams.backgroundPosition2.y) {
+    yPosition = actorParams.backgroundPosition1.y;
+  } else {
+    yPosition =
+      actorParams.backgroundPosition1.y -
+      (actorParams.backgroundPosition1.y - actorParams.backgroundPosition2.y) *
+        moveFraction;
+  }
+
+  actor.style.backgroundPosition = `${xPosition}% ${yPosition}%`;
+  if (moveFraction > 0 && moveFraction < 1) {
+    console.log(`${actorParams.id}: ${actor.style.backgroundPosition}`);
+  }
+};

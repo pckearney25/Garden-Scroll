@@ -32,7 +32,8 @@ h4 {
   text-align: center;
 }
 
-.slideshow-container {
+.slideshow-container,
+.parallax-slideshow-container {
   position: relative;
   height: 90vh;
   width: 100%;
@@ -55,33 +56,30 @@ figure {
   -webkit-animation: slideShow 24s linear infinite 0s;
 }
 
-.slide-1 {
-  opacity: 1;
+#intro-slide-1 {
   background: url("../images/dome.jpg") no-repeat center center;
+  opacity: 1;
   background-size: cover;
   -webkit-background-size: cover;
 }
-
-.slide-2 {
+#intro-slide-2 {
+  background: url("../images/greenhouse.jpg") no-repeat center center;
   animation-delay: 6s;
   -o-animation-delay: 6s;
-  background: url("../images/greenhouse.jpg") no-repeat center center;
   background-size: cover;
   -webkit-background-size: cover;
 }
-
-.slide-3 {
+#intro-slide-3 {
+  background: url("../images/observatory.jpg") no-repeat center center;
   animation-delay: 12s;
   -webkit-animation-delay: 12s;
-  background: url("../images/observatory.jpg") no-repeat center center;
   background-size: cover;
   -webkit-background-size: cover;
 }
-
-.slide-4 {
+#intro-slide-4 {
+  background: url("../images/japanese-garden.jpg") no-repeat center center;
   animation-delay: 18s;
   -webkit-animation-delay: 18s;
-  background: url("../images/japanese-garden.jpg") no-repeat center center;
   background-size: cover;
   -webkit-background-size: cover;
 }
@@ -174,10 +172,30 @@ figure {
   background-image: url("../images/sunflowers.jpg");
 }
 
+.parallax-move-background {
+  /* Set a specific height */
+  position: relative;
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  /* scroll (default), fixed, local (scrolls with element contents), initial, inherit*/
+  background-attachment: fixed;
+  /* left, right and center and be combined with top center and bottom. default 0% 0%, can be px, mix*/
+  /* repeat, repeat-x, repeat-y, no-repreat, space, round, initial, inherit*/
+  background-repeat: no-repeat;
+  /* auto (default), cover, contain, and numerical inputs.*/
+  background-size: cover;
+}
+
+#parallax-5 {
+  /* The image used */
+  background-image: url("../images/bald-cypress.jpg");
+  background-position: 50% 100%;
+}
 .parallax-comment-box {
   margin: 0;
   width: 50%;
-  color: #c20176;
+  color: rgba(194, 1, 118, 1);
   background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
   top: 50%;
@@ -185,7 +203,7 @@ figure {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   padding: 1.8rem;
-  z-index: 1;
+  z-index: 10;
 }
 
 .sliding-background-container {
@@ -237,7 +255,7 @@ figure {
   position: relative;
   /* Set a specific height */
   height: 100vh;
-  background-image: url("../images/coneflowers.jpg");
+  background-image: url("../images/bees.jpg");
   background-size: cover;
   overflow: hidden;
   z-index: -30;
@@ -657,67 +675,77 @@ figure {
   border: 1px solid white;
 }
 
-#film-set-flex-container {
-  background-color: green;
+#conclusion-slide-1 {
+  background: url("../images/ottoman-garden.jpg") no-repeat fixed center center;
+  opacity: 1;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+#conclusion-slide-2 {
+  background: url("../images/hedge-garden.jpg") no-repeat fixed center center;
+  animation-delay: 6s;
+  -webkit-animation-delay: 6s;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+#conclusion-slide-3 {
+  background: url("../images/espallier.jpg") no-repeat fixed center center;
+  animation-delay: 12s;
+  -webkit-animation-delay: 12s;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+#conclusion-slide-4 {
+  background: url("../images/japanese-garden2.jpg") no-repeat fixed center
+    center;
+  animation-delay: 18s;
+  -webkit-animation-delay: 18s;
+  background-size: cover;
+  -webkit-background-size: cover;
 }
 
-.film-image {
-  background-color: navy;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  height: 50vh;
+footer {
+  background-color: rgba(255, 255, 0, 1);
+  color: indigo;
+  font-size: 1.1em;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-top: 2px solid indigo;
 }
 
-#camera-man {
-  width: 27.5%;
-  height: 100%;
-}
-#actors {
-  width: 45.5%;
-  height: 100%;
-}
-#director {
-  width: 27%;
-  height: 100%;
+.soc-media-div {
+  margin-top: 5px;
 }
 
-.dark {
-  mix-blend-mode: multiply;
+.soc-media-links {
+  margin: 0px 10px 0px 10px;
 }
 
-.lit {
-  mix-blend-mode: normal;
+.fab {
+  font-size: 36px;
+  color: indigo;
 }
 
-.spotlight1 {
-  -webkit-animation: spotlight1 2s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
-  animation: spotlight1 2s;
-  animation-fill-mode: forwards;
+.fas {
+  font-size: 30px;
+  color: indigo;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes spotlight1 {
-  from {
-    mix-blend-mode: multiply;
-  }
-  to {
-    mix-blend-mode: normal;
-  }
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
 }
 
-@keyframes spotlight1 {
-  from {
-    mix-blend-mode: multiply;
-  }
-  to {
-    mix-blend-mode: normal;
-  }
-}
-.final-div {
-  height: 100vh;
-  background-color: rgba(0, 100, 0, 1);
-  background: white url("../images/joepye.jpg") center/cover no-repeat fixed;
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.125);
+  color: black;
 }

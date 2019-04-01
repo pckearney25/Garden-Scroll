@@ -24,6 +24,19 @@ const animationBoxDirector = {
   animation1: { id: "animation-div", start: 40, scrollUp: true, mark: "top" }
 };
 
+const backgroundImageDirector = {
+  backgroundImage1: { id: "parallax-5", start: 50, stop: 0, mark: "top" }
+};
+
+const conclusionDirector = {
+  scroll1: {
+    id: "conclusion-container",
+    start: 20,
+    stop: 0,
+    mark: "top"
+  }
+};
+
 //PROGRASSIVE SCROLLING ACTOR OBJECTS:
 //These contain both intial and final CSS values.
 //Position keys refer to percentages of relative parent.
@@ -141,6 +154,23 @@ const circleActor = {
     downEndClass: "circle"
   }
 };
+//the background x and y postions position values are in % will be
+const backgroundImageActor = {
+  moveBackground1: {
+    id: "parallax-5",
+    backgroundPosition1: { x: 50, y: 100 },
+    backgroundPosition2: { x: 50, y: 0 }
+  }
+};
+const parallelSlideshowActor = {
+  scroll1: {
+    id: "concluding-triggered-box",
+    color1: { red: 194, green: 1, blue: 118, opacity: 0 },
+    color2: { red: 194, green: 1, blue: 118, opacity: 1 },
+    background1: { red: 255, green: 255, blue: 255, opacity: 0 },
+    background2: { red: 255, green: 255, blue: 255, opacity: 0.8 }
+  }
+};
 
 //THE SCRIPT FOR THE DIRECTORS AND ACTORS!!!
 window.onscroll = function() {
@@ -170,4 +200,13 @@ window.onscroll = function() {
   animateObject(circleActor.circle2, animationBoxDirector.animation1);
   animateObject(circleActor.circle3, animationBoxDirector.animation1);
   animateObject(circleActor.circle4, animationBoxDirector.animation1);
+  moveBackgroundPosition(
+    backgroundImageActor.moveBackground1,
+    backgroundImageDirector.backgroundImage1
+  );
+  setColor(parallelSlideshowActor.scroll1, conclusionDirector.scroll1);
+  setBackgroundColor(
+    parallelSlideshowActor.scroll1,
+    conclusionDirector.scroll1
+  );
 };

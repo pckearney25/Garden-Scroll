@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Garden Scroll</title>
     <link rel="shortcut icon" href="./assets/images/lilly.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/parallax1A.css" type="text/css" />
     <script src="assets/javascript/scroll-functions.js"></script>
@@ -24,10 +30,10 @@
     </div>
 
     <div class="slideshow-container">
-      <figure class="slide-1"></figure>
-      <figure class="slide-2"></figure>
-      <figure class="slide-3"></figure>
-      <figure class="slide-4"></figure>
+      <figure id="intro-slide-1"></figure>
+      <figure id="intro-slide-2"></figure>
+      <figure id="intro-slide-3"></figure>
+      <figure id="intro-slide-4"></figure>
     </div>
     <div class="comment-box" id="first-js-box">
       The garden has inspired visitors for over 160 years. I wanted to convey a
@@ -110,9 +116,9 @@
     </div>
 
     <div class="comment-box" id="second-js-box">
-      Today more and more sites incorporate styling effects that are produced
-      when the user scrolls to a specific location on the page. There are two
-      types: abrupt and progressive effects.
+      Triggered Effects: Many sites today incorporate styling effects that are
+      triggered when the user scrolls to a specific location on the page. Two
+      common types are abrupt and progressive effects.
     </div>
 
     <div class="effect-container" id="abrupt-demo-container">
@@ -136,8 +142,9 @@
     <div class="comment-box" id="third-js-box">
       Abrupt Effects: When an element reaches a certain position on the page, an
       animation, transition, or transformation or simple style change is
-      triggerd in a second element. A simple way to do this is to use JavaScript
-      to change the class or id attribute of the second element.
+      triggered in a second element. Javascript is used to change to the class
+      or id attributes of these secondary elements. Above, the parent container
+      "directs" the circles to pop by triggering.
     </div>
     <div class="effect-container" id="progressive-demo-container">
       <div class="effect-header">Progressive Scrolling Effects</div>
@@ -150,15 +157,55 @@
     <div class="comment-box" id="fourth-js-box">
       Progressive Effects: As an element moves between two predefined positions
       on the page, JavaScript is used to enact a gradual change in the CSS
-      styling of a second element.
+      styling of a second element. The color changes and movements of the
+      squares (above) are progressive effects. This comment box also utilizes
+      progressive effects to change text and background colors.
     </div>
-    <div class="final-div"></div>
+    <div class="parallax-move-background" id="parallax-5">
+      <div class="parallax-comment-box">
+        Design Tip: With triggered Effects, you can present information in a
+        more controlled way while providing an enjoyable user experience .
+      </div>
+    </div>
     <div class="comment-box" id="fifth-js-box">
-      Organizing Scrolling Effects: OK, we're going to have to leave the
-      gardening metafore aside for a minute here. I found it best to think of
-      the process like making a movie.
+      Of course, effects can be combined to really bring real vibrancy to your
+      pages! Below we have a parallax animated slide show with a progressive
+      message box appearance and an animated message.
     </div>
-
-    <div class="final-div"></div>
+    <div class="parallax-slideshow-container" id="conclusion-container">
+      <figure id="conclusion-slide-1"></figure>
+      <figure id="conclusion-slide-2"></figure>
+      <figure id="conclusion-slide-3"></figure>
+      <figure id="conclusion-slide-4"></figure>
+      <div class="parallax-comment-box" id="concluding-triggered-box">
+        Thank you for scrolling through the Missouri Botanical Gardens with me!
+      </div>
+    </div>
+    <footer>
+      <div>© 2019 Patrick Kearney</div>
+      <div class="soc-media-div">
+        <a
+          class="soc-media-links hvr-grow"
+          href="https://pckearney.herokuapp.com"
+          target="blank"
+        >
+          <i class="fas fa-globe"></i>
+        </a>
+        <a
+          class="soc-media-links hvr-grow"
+          href="https://www.linkedin.com/in/patrickckearney/"
+          target="blank"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          class="soc-media-links hvr-grow"
+          href="https://github.com/pckearney25"
+          target="blank"
+        >
+          <i class="fab fa-github-square"></i>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
