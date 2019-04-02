@@ -12,13 +12,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="./assets/css/parallax1A.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/parallax.css" type="text/css" />
     <script src="assets/javascript/scroll-functions.js"></script>
-    <script src="assets/javascript/parallax1A.js"></script>
+    <script src="assets/javascript/parallax.js"></script>
   </head>
 
   <body>
-    <div class="intro">
+    <div id="intro">
       <h1>Scrolling the Missouri Botanical Gardens.</h1>
       <hr />
       <h4>Creating beautiful natural and digital environments.</h4>
@@ -95,7 +95,7 @@
 
     <div class="parallax" id="parallax-4">
       <div class="parallax-comment-box">
-        Design Tip: The effects should support the message, not overwhelm it.
+        Design Tip: Effects should support the message, not overwhelm it.
       </div>
     </div>
 
@@ -106,12 +106,12 @@
     </div>
 
     <div class="video-parallax">
-      <video autoplay muted loop id="bee-video">
+      <video id="bee-video" autoplay muted loop>
         <source src="./assets/movies/bee-bee-movie.mp4" type="video/mp4" />
       </video>
       <div class="parallax-comment-box">
-        Design Tip: Code with the users' eperience in mind. The design should
-        attract users like bees to this bee bee tree.
+        Design Tip: Garden and code with the users' eperience in mind. Designs
+        should attract users like bees to this bee bee tree.
       </div>
     </div>
 
@@ -162,26 +162,26 @@
       progressive effects to change text and background colors.
     </div>
     <div class="parallax-move-background" id="parallax-5">
-      <div class="parallax-comment-box">
+      <div class="parallax-comment-box" id="cypress-comment-box">
         Design Tip: With triggered effects, you can present information in a
         more controlled way while providing an enjoyable user experience .
       </div>
     </div>
     <div class="comment-box" id="fifth-js-box">
       Of course, in coding and gardening, effects can be combined to create real
-      vibrancy! Below we have a parallax animated slide show with a progressive
-      message box appearance and an animated message.
+      vibrancy! Below we have a parallax animated slide show with an abrupt
+      message box appearance and disappearence.
     </div>
     <div class="parallax-slideshow-container" id="conclusion-container">
       <figure id="conclusion-slide-1"></figure>
       <figure id="conclusion-slide-2"></figure>
       <figure id="conclusion-slide-3"></figure>
       <figure id="conclusion-slide-4"></figure>
-      <div class="parallax-comment-box" id="concluding-triggered-box">
+      <div class="opaque0" id="concluding-triggered-box">
         Thank you for scrolling through the Missouri Botanical Gardens with me!
       </div>
     </div>
-    <footer>
+    <footer id="footer-trigger">
       <div>© 2019 Patrick Kearney</div>
       <div class="soc-media-div">
         <a

@@ -25,15 +25,21 @@ const animationBoxDirector = {
 };
 
 const backgroundImageDirector = {
-  backgroundImage1: { id: "parallax-5", start: 50, stop: 0, mark: "top" }
+  backgroundImage1: { id: "parallax-5", start: 50, stop: 0, mark: "top" },
+  scroll1: {
+    id: "parallax-5",
+    start: 30,
+    stop: 10,
+    mark: "top"
+  }
 };
 
 const conclusionDirector = {
-  scroll1: {
-    id: "conclusion-container",
-    start: 20,
-    stop: 0,
-    mark: "top"
+  animation1: {
+    id: "footer-trigger",
+    start: 100,
+    scrollUp: true,
+    mark: "bottom"
   }
 };
 
@@ -160,19 +166,30 @@ const backgroundImageActor = {
     id: "parallax-5",
     backgroundPosition1: { x: 50, y: 100 },
     backgroundPosition2: { x: 50, y: 0 }
-  }
-};
-const parallelSlideshowActor = {
+  },
   scroll1: {
-    id: "concluding-triggered-box",
+    id: "cypress-comment-box",
     color1: { red: 194, green: 1, blue: 118, opacity: 0 },
     color2: { red: 194, green: 1, blue: 118, opacity: 1 },
     background1: { red: 255, green: 255, blue: 255, opacity: 0 },
     background2: { red: 255, green: 255, blue: 255, opacity: 0.8 }
   }
 };
+const parallelSlideshowActor = {
+  animate1: {
+    id: "concluding-triggered-box",
+    upAddClass: "appear1",
+    //class that will replace the current classList on scroll-up animation completion
+    upEndClass: "parallax-comment-box",
+    //triggers the scroll-down animation
+    downAddClass: "fade1",
+    //class that will replace the current classList on scroll-down animation completion
+    downEndClass: "opaque0"
+  }
+};
 
 //THE SCRIPT FOR THE DIRECTORS AND ACTORS!!!
+
 window.onscroll = function() {
   setColor(scrollBoxActor.scroll1, scrollBoxDirector.scroll1);
   setBackgroundColor(scrollBoxActor.scroll1, scrollBoxDirector.scroll1);
@@ -204,9 +221,10 @@ window.onscroll = function() {
     backgroundImageActor.moveBackground1,
     backgroundImageDirector.backgroundImage1
   );
-  setColor(parallelSlideshowActor.scroll1, conclusionDirector.scroll1);
+  setColor(backgroundImageActor.scroll1, backgroundImageDirector.scroll1);
   setBackgroundColor(
-    parallelSlideshowActor.scroll1,
-    conclusionDirector.scroll1
+    backgroundImageActor.scroll1,
+    backgroundImageDirector.scroll1
   );
+  animateObject(parallelSlideshowActor.animate1, conclusionDirector.animation1);
 };

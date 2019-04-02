@@ -3,35 +3,30 @@ body {
   font-style: italic;
   font-size: 1.4rem;
 }
-
 h1 {
   font-size: 2.4rem;
 }
-
 hr {
   border-color: rgba(255, 255, 0, 1);
   margin: 0.25rem 0 0.75rem 0;
 }
-
 h4 {
   font-size: 1.6rem;
   font-style: italic;
 }
-
-.intro {
+#intro {
+  min-height: 100px;
   background-color: indigo;
   color: rgba(255, 255, 0, 1);
   text-align: center;
   padding: 1rem;
 }
-
 #intro-comment-box {
   color: rgba(71, 32, 122, 1);
   background: rgba(255, 255, 0, 1);
   padding: 0.8rem;
   text-align: center;
 }
-
 .slideshow-container,
 .parallax-slideshow-container {
   position: relative;
@@ -40,7 +35,6 @@ h4 {
   background-color: lightgray;
   overflow: hidden;
 }
-
 figure {
   position: absolute;
   top: 0;
@@ -49,13 +43,11 @@ figure {
   height: 100%;
   opacity: 0;
   /*animation*/
-
   animation: slideShow 24s linear infinite 0s;
   -o-animation: slideShow 24s linear infinite 0s;
   -moz-animation: slideShow 24s linear infinite 0s;
   -webkit-animation: slideShow 24s linear infinite 0s;
 }
-
 #intro-slide-1 {
   background: url("../images/dome.jpg") no-repeat center center;
   opacity: 1;
@@ -84,7 +76,6 @@ figure {
   -webkit-background-size: cover;
 }
 /* keyframes*/
-
 @keyframes slideShow {
   0% {
     opacity: 0;
@@ -108,7 +99,6 @@ figure {
     -ms-transformm: scale(1);
   }
 }
-
 @-webkit-keyframes slideShow {
   0% {
     opacity: 0;
@@ -129,7 +119,6 @@ figure {
     -webkit-transformm: scale(1);
   }
 }
-
 .comment-box,
 #text-3 {
   color: rgba(255, 255, 0, 1);
@@ -140,7 +129,6 @@ figure {
   /* Set a specific height */
   position: relative;
   min-height: 50vh;
-
   /* Create the parallax scrolling effect */
   /* scroll (default), fixed, local (scrolls with element contents), initial, inherit*/
   background-attachment: fixed;
@@ -151,27 +139,22 @@ figure {
   /* auto (default), cover, contain, and numerical inputs.*/
   background-size: cover;
 }
-
 #parallax-1 {
   /* The image used */
   background-image: url("../images/lilly.jpg");
 }
-
 #parallax-2 {
   /* The image used */
   background-image: url("../images/sunflowers.jpg");
 }
-
 #parallax-3 {
   /* The image used */
   background-image: url("../images/sunflowers.jpg");
 }
-
 #parallax-4 {
   /* The image used */
   background-image: url("../images/sunflowers.jpg");
 }
-
 .parallax-move-background {
   /* Set a specific height */
   position: relative;
@@ -186,7 +169,6 @@ figure {
   /* auto (default), cover, contain, and numerical inputs.*/
   background-size: cover;
 }
-
 #parallax-5 {
   /* The image used */
   background-image: url("../images/bald-cypress.jpg");
@@ -197,6 +179,7 @@ figure {
   width: 50%;
   color: rgba(194, 1, 118, 1);
   background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -205,12 +188,10 @@ figure {
   padding: 1.8rem;
   z-index: 10;
 }
-
 .sliding-background-container {
   height: 60vh;
   overflow: hidden;
 }
-
 .sliding-background {
   background: url("../images/grove-house.jpg") no-repeat;
   background-size: cover;
@@ -219,7 +200,6 @@ figure {
 
   animation: xslide 60s linear infinite alternate;
 }
-
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes xslide {
   0% {
@@ -235,7 +215,6 @@ figure {
     background-position: right center;
   }
 }
-
 @keyframes xslide {
   0% {
     background-position: left center;
@@ -250,7 +229,6 @@ figure {
     background-position: right center;
   }
 }
-
 .video-parallax {
   position: relative;
   /* Set a specific height */
@@ -260,7 +238,6 @@ figure {
   overflow: hidden;
   z-index: -30;
 }
-
 #bee-video {
   position: fixed;
   height: auto;
@@ -281,7 +258,6 @@ figure {
   text-align: center;
   padding-top: 1.5rem;
 }
-
 #animation-div {
   height: 30vh;
   width: 90%;
@@ -293,12 +269,10 @@ figure {
   align-items: center;
   padding-bottom: 1.5rem;
 }
-
 .animation-box {
   /*flex-grow: 1;*/
   width: 25%;
 }
-
 .circle {
   width: 10px;
   height: 10px;
@@ -306,7 +280,6 @@ figure {
   border-radius: 50%;
   margin: 0 auto;
 }
-
 .circle2 {
   width: 80px;
   height: 80px;
@@ -314,14 +287,12 @@ figure {
   border-radius: 50%;
   margin: 0 auto;
 }
-
 .bloom1 {
   -webkit-animation: bloom1 2s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation: bloom1 2s;
   animation-fill-mode: forwards;
 }
-
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bloom1 {
   from {
@@ -333,7 +304,6 @@ figure {
     height: 80px;
   }
 }
-
 @keyframes bloom1 {
   from {
     width: 10px;
@@ -344,7 +314,6 @@ figure {
     height: 80px;
   }
 }
-
 .bloom2 {
   -webkit-animation: bloom2 2s 0.5s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
@@ -352,7 +321,6 @@ figure {
   animation: bloom2 2s 0.5s;
   animation-fill-mode: forwards;
 }
-
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bloom2 {
   0% {
@@ -405,7 +373,6 @@ figure {
     height: 80px;
   }
 }
-
 @keyframes bloom2 {
   0% {
     width: 10px;
@@ -457,14 +424,12 @@ figure {
     height: 80px;
   }
 }
-
 .bloom3 {
   -webkit-animation: bloom3 2s 0.75s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation: bloom3 2s 0.75s;
   animation-fill-mode: forwards;
 }
-
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bloom3 {
   0% {
@@ -527,7 +492,6 @@ figure {
     margin-bottom: 0px;
   }
 }
-
 @keyframes bloom3 {
   0% {
     width: 10px;
@@ -589,14 +553,12 @@ figure {
     margin-bottom: 0px;
   }
 }
-
 .bloom4 {
   -webkit-animation: bloom4 2s 0.5s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation: bloom4 2s 0.5s;
   animation-fill-mode: forwards;
 }
-
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bloom4 {
   from {
@@ -619,14 +581,12 @@ figure {
     height: 80px;
   }
 }
-
 .wilt {
   -webkit-animation: wilt 2s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation: wilt 2s;
   animation-fill-mode: forwards;
 }
-
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes wilt {
   from {
@@ -649,9 +609,9 @@ figure {
     height: 10px;
   }
 }
-
 #progressive-demo-container {
   height: 60vh;
+  min-height: 400px;
   position: relative;
 }
 #moving-frames-div {
@@ -664,7 +624,6 @@ figure {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
 #span-box-1,
 #span-box-2,
 #span-box-3,
@@ -674,7 +633,6 @@ figure {
   position: absolute;
   border: 1px solid white;
 }
-
 #conclusion-slide-1 {
   background: url("../images/ottoman-garden.jpg") no-repeat fixed center center;
   opacity: 1;
@@ -704,6 +662,77 @@ figure {
   -webkit-background-size: cover;
 }
 
+.opaque0 {
+  margin: 0;
+  width: 50%;
+  color: rgba(194, 1, 118, 0);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 1.8rem;
+  z-index: 10;
+}
+
+.fade1 {
+  -webkit-animation: fade1 1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation: fade1 1s;
+  animation-fill-mode: forwards;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fade1 {
+  from {
+    color: rgba(194, 1, 118, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  to {
+    color: rgba(194, 1, 118, 0);
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes fade1 {
+  from {
+    color: rgba(194, 1, 118, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  to {
+    color: rgba(194, 1, 118, 0);
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.appear1 {
+  -webkit-animation: appear1 1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation: appear1 1s;
+  animation-fill-mode: forwards;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes appear1 {
+  from {
+    color: rgba(194, 1, 118, 0);
+    background-color: rgba(255, 255, 255, 0);
+  }
+  to {
+    color: rgba(194, 1, 118, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+@keyframes appear1 {
+  from {
+    color: rgba(194, 1, 118, 0);
+    background-color: rgba(255, 255, 255, 0);
+  }
+  to {
+    color: rgba(194, 1, 118, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
 footer {
   background-color: rgba(255, 255, 0, 1);
   color: indigo;
@@ -713,25 +742,20 @@ footer {
   padding-bottom: 20px;
   border-top: 2px solid indigo;
 }
-
 .soc-media-div {
-  margin-top: 5px;
+  margin-top: 8px;
 }
-
 .soc-media-links {
   margin: 0px 10px 0px 10px;
 }
-
 .fab {
-  font-size: 36px;
+  font-size: 1.3em;
   color: indigo;
 }
-
 .fas {
-  font-size: 30px;
+  font-size: 1.1em;
   color: indigo;
 }
-
 .hvr-grow {
   display: inline-block;
   vertical-align: middle;
@@ -742,10 +766,26 @@ footer {
   transition-duration: 0.3s;
   transition-property: transform;
 }
-
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
   transform: scale(1.125);
   color: black;
+}
+
+@media all and (max-width: 542px) {
+  body {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  #parallax-5 {
+    /* The image used */
+    background-image: url("../images/bald-cypress2.jpg");
+  }
 }
