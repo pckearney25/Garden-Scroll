@@ -37,9 +37,9 @@ const backgroundImageDirector = {
 const conclusionDirector = {
   animation1: {
     id: "footer-trigger",
-    start: 100,
+    start: 98,
     scrollUp: true,
-    mark: "bottom"
+    mark: "top"
   }
 };
 
