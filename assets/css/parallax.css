@@ -661,7 +661,6 @@ figure {
   background-size: cover;
   -webkit-background-size: cover;
 }
-
 .opaque0 {
   margin: 0;
   width: 50%;
@@ -675,34 +674,6 @@ figure {
   transform: translate(-50%, -50%);
   padding: 1.8rem;
   z-index: 10;
-}
-
-.fade1 {
-  -webkit-animation: fade1 1s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
-  animation: fade1 1s;
-  animation-fill-mode: forwards;
-}
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes fade1 {
-  from {
-    color: rgba(194, 1, 118, 1);
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  to {
-    color: rgba(194, 1, 118, 0);
-    background-color: rgba(255, 255, 255, 0);
-  }
-}
-@keyframes fade1 {
-  from {
-    color: rgba(194, 1, 118, 1);
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  to {
-    color: rgba(194, 1, 118, 0);
-    background-color: rgba(255, 255, 255, 0);
-  }
 }
 
 .appear1 {
@@ -730,6 +701,34 @@ figure {
   to {
     color: rgba(194, 1, 118, 1);
     background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.fade1 {
+  -webkit-animation: fade1 1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation: fade1 1s;
+  animation-fill-mode: forwards;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fade1 {
+  from {
+    color: rgba(194, 1, 118, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  to {
+    color: rgba(194, 1, 118, 0);
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes fade1 {
+  from {
+    color: rgba(194, 1, 118, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  to {
+    color: rgba(194, 1, 118, 0);
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
