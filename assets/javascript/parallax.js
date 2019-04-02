@@ -21,7 +21,7 @@ const spanBoxDirector = {
 
 const animationBoxDirector = {
   scroll1: { id: "animation-div", start: 70, stop: 55, mark: "top" },
-  animation1: { id: "animation-div", start: 40, scrollUp: true, mark: "top" }
+  animation1: { id: "animation-div", start: 55, scrollUp: true, mark: "top" }
 };
 
 const backgroundImageDirector = {
