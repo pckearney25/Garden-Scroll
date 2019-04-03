@@ -57,7 +57,7 @@ figure {
 #intro-slide-2 {
   background: url("../images/greenhouse.jpg") no-repeat center center;
   animation-delay: 6s;
-  -o-animation-delay: 6s;
+  -webkit-animation-delay: 6s;
   background-size: cover;
   -webkit-background-size: cover;
 }
@@ -633,29 +633,30 @@ figure {
   position: absolute;
   border: 1px solid white;
 }
+
 #conclusion-slide-1 {
-  background: url("../images/ottoman-garden.jpg") no-repeat fixed center center;
+  /* Removed "fixed" which was controlling parallax effect*/
+  background: url("../images/ottoman-garden.jpg") no-repeat center center;
   opacity: 1;
   background-size: cover;
   -webkit-background-size: cover;
 }
 #conclusion-slide-2 {
-  background: url("../images/hedge-garden.jpg") no-repeat fixed center center;
+  background: url("../images/hedge-garden.jpg") no-repeat center center;
   animation-delay: 6s;
   -webkit-animation-delay: 6s;
   background-size: cover;
   -webkit-background-size: cover;
 }
 #conclusion-slide-3 {
-  background: url("../images/espallier.jpg") no-repeat fixed center center;
+  background: url("../images/espallier.jpg") no-repeat center center;
   animation-delay: 12s;
   -webkit-animation-delay: 12s;
   background-size: cover;
   -webkit-background-size: cover;
 }
 #conclusion-slide-4 {
-  background: url("../images/japanese-garden2.jpg") no-repeat fixed center
-    center;
+  background: url("../images/japanese-garden2.jpg") no-repeat center center;
   animation-delay: 18s;
   -webkit-animation-delay: 18s;
   background-size: cover;
