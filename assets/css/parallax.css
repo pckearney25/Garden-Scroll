@@ -162,16 +162,19 @@ figure {
 
   /* Create the parallax scrolling effect */
   /* scroll (default), fixed, local (scrolls with element contents), initial, inherit*/
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   /* left, right and center and be combined with top center and bottom. default 0% 0%, can be px, mix*/
   /* repeat, repeat-x, repeat-y, no-repreat, space, round, initial, inherit*/
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   /* auto (default), cover, contain, and numerical inputs.*/
-  background-size: cover;
+  /*background-size: cover;*/
 }
 #parallax-5 {
   /* The image used */
   background-image: url("../images/bald-cypress.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: 50% 100%;
 }
 .parallax-comment-box {
