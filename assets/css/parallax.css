@@ -128,7 +128,7 @@ figure {
 .parallax {
   /* Set a specific height */
   position: relative;
-  min-height: 50vh;
+  min-height: 90vh;
   /* Create the parallax scrolling effect */
   /* scroll (default), fixed, local (scrolls with element contents), initial, inherit*/
   background-attachment: fixed;
@@ -177,6 +177,7 @@ figure {
   background-size: cover;
   background-position: 50% 100%;
 }
+
 .parallax-comment-box {
   margin: 0;
   width: 50%;
@@ -191,6 +192,23 @@ figure {
   padding: 1.8rem;
   z-index: 10;
 }
+
+.parallax-comment-box-zero {
+  margin: 0;
+  width: 0%;
+  font-size: 0rem;
+  color: rgba(194, 1, 118, 1);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0rem;
+  z-index: 10;
+}
+
 .sliding-background-container {
   height: 60vh;
   overflow: hidden;
@@ -238,7 +256,7 @@ figure {
   height: 100vh;
   background-image: url("../images/bees.jpg");
   background-size: cover;
-  overflow: hidden;
+  /*overflow: hidden;*/
   z-index: -30;
 }
 #bee-video {
@@ -317,6 +335,73 @@ figure {
     height: 80px;
   }
 }
+
+.grow {
+  -webkit-animation: grow 0.75s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation: grow 0.75s;
+  animation-fill-mode: forwards;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes grow {
+  from {
+    width: 0%;
+    font-size: 0rem;
+    padding: 0rem;
+  }
+  to {
+    width: 50%;
+    font-size: 1.4rem;
+    padding: 1.8rem;
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0%;
+    font-size: 0rem;
+    padding: 0rem;
+  }
+  to {
+    width: 50%;
+    font-size: 1.4rem;
+    padding: 1.8rem;
+  }
+}
+
+.shrink {
+  -webkit-animation: shrink 0.75s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation: shrink 0.75s;
+  animation-fill-mode: forwards;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes shrink {
+  from {
+    width: 50%;
+    font-size: 1.4rem;
+    padding: 1.8rem;
+  }
+  to {
+    width: 0%;
+    font-size: 0rem;
+    padding: 0rem;
+  }
+}
+
+@keyframes shrink {
+  from {
+    width: 50%;
+    font-size: 1.4rem;
+    padding: 1.8rem;
+  }
+  to {
+    width: 0%;
+    font-size: 0rem;
+    padding: 0rem;
+  }
+}
+
 .bloom2 {
   -webkit-animation: bloom2 2s 0.5s; /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
@@ -640,12 +725,14 @@ figure {
 #conclusion-slide-1 {
   /* Removed "fixed" which was controlling parallax effect*/
   background: url("../images/ottoman-garden.jpg") no-repeat center center;
+  background-attachment: fixed;
   opacity: 1;
   background-size: cover;
   -webkit-background-size: cover;
 }
 #conclusion-slide-2 {
   background: url("../images/hedge-garden.jpg") no-repeat center center;
+  background-attachment: fixed;
   animation-delay: 6s;
   -webkit-animation-delay: 6s;
   background-size: cover;
@@ -653,6 +740,7 @@ figure {
 }
 #conclusion-slide-3 {
   background: url("../images/espallier.jpg") no-repeat center center;
+  background-attachment: fixed;
   animation-delay: 12s;
   -webkit-animation-delay: 12s;
   background-size: cover;
@@ -660,6 +748,7 @@ figure {
 }
 #conclusion-slide-4 {
   background: url("../images/japanese-garden2.jpg") no-repeat center center;
+  background-attachment: fixed;
   animation-delay: 18s;
   -webkit-animation-delay: 18s;
   background-size: cover;
@@ -776,6 +865,29 @@ footer {
   color: black;
 }
 
+@media all and (max-width: 1024px) {
+  .parallax,
+  #parallax-5,
+  #conclusion-slide-1,
+  #conclusion-slide-2,
+  #conclusion-slide-3,
+  #conclusion-slide-4 {
+    background-attachment: scroll;
+  }
+
+  #parallax-2 {
+    background-image: url("../images/joepye.jpg");
+  }
+
+  #parallax-4 {
+    background-image: url("../images/coneflowers.jpg");
+  }
+
+  #bee-video {
+    position: absolute;
+  }
+}
+
 @media all and (max-width: 542px) {
   body {
     font-size: 1.1rem;
@@ -790,5 +902,57 @@ footer {
   #parallax-5 {
     /* The image used */
     background-image: url("../images/bald-cypress2.jpg");
+  }
+
+  @-webkit-keyframes grow {
+    from {
+      width: 0%;
+      font-size: 0rem;
+      padding: 0rem;
+    }
+    to {
+      width: 50%;
+      font-size: 1.1rem;
+      padding: 1.8rem;
+    }
+  }
+
+  @keyframes grow {
+    from {
+      width: 0%;
+      font-size: 0rem;
+      padding: 0rem;
+    }
+    to {
+      width: 50%;
+      font-size: 1.1rem;
+      padding: 1.8rem;
+    }
+  }
+
+  @-webkit-keyframes shrink {
+    from {
+      width: 50%;
+      font-size: 1.1rem;
+      padding: 1.8rem;
+    }
+    to {
+      width: 0%;
+      font-size: 0rem;
+      padding: 0rem;
+    }
+  }
+
+  @keyframes shrink {
+    from {
+      width: 50%;
+      font-size: 1.1rem;
+      padding: 1.8rem;
+    }
+    to {
+      width: 0%;
+      font-size: 0rem;
+      padding: 0rem;
+    }
   }
 }

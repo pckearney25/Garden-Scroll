@@ -147,8 +147,8 @@ const moveAbsoluteObject = (actorParams, directorParams) => {
   let left;
   let bottom;
   let right;
-
   let positionFraction = cssZeroToOne(directorParams);
+
   if (actorParams.position1.top !== "" && actorParams.position2.top !== "") {
     if (actorParams.position1.top === actorParams.position2.top) {
       top = actorParams.position1.top;

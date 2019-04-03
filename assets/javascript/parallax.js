@@ -11,12 +11,25 @@ const scrollBoxDirector = {
   scroll5: { id: "fifth-js-box", start: 80, stop: 55, mark: "top" }
 };
 
+const commentBoxDirector = {
+  comment1: { id: "parallax-1", start: 15, scrollUp: true, mark: "top" },
+  comment2: { id: "parallax-2", start: 15, scrollUp: true, mark: "top" },
+  comment3: { id: "parallax-3", start: 15, scrollUp: true, mark: "top" },
+  comment4: { id: "parallax-4", start: 15, scrollUp: true, mark: "top" },
+  videoComment: {
+    id: "video-parallax-box",
+    start: 15,
+    scrollUp: true,
+    mark: "top"
+  }
+};
+
 const spanBoxDirector = {
-  scroll1: { id: "moving-frames-div", start: 55, stop: 50, mark: "top" },
-  scroll2: { id: "moving-frames-div", start: 52, stop: 47, mark: "top" },
-  scroll3: { id: "moving-frames-div", start: 49, stop: 44, mark: "top" },
-  scroll4: { id: "moving-frames-div", start: 46, stop: 41, mark: "top" },
-  position1: { id: "moving-frames-div", start: 40, stop: 20, mark: "top" }
+  scroll1: { id: "moving-frames-div", start: 65, stop: 60, mark: "top" },
+  scroll2: { id: "moving-frames-div", start: 62, stop: 57, mark: "top" },
+  scroll3: { id: "moving-frames-div", start: 59, stop: 54, mark: "top" },
+  scroll4: { id: "moving-frames-div", start: 56, stop: 51, mark: "top" },
+  position1: { id: "moving-frames-div", start: 50, stop: 30, mark: "top" }
 };
 
 const animationBoxDirector = {
@@ -87,6 +100,47 @@ const scrollBoxActor = {
   }
 };
 
+const commentBoxActor = {
+  comment1: {
+    id: "parallax-1-comment",
+    //triggers the scroll-up animation
+    upAddClass: "grow",
+    //class that will replace the current classList on scroll-up animation completion
+    upEndClass: "parallax-comment-box",
+    //triggers the scroll-down animation
+    downAddClass: "shrink",
+    //class that will replace the current classList on scroll-down animation completion
+    downEndClass: "parallax-comment-box-zero"
+  },
+  comment2: {
+    id: "parallax-2-comment",
+    upAddClass: "grow",
+    upEndClass: "parallax-comment-box",
+    downAddClass: "shrink",
+    downEndClass: "parallax-comment-box-zero"
+  },
+  comment3: {
+    id: "parallax-3-comment",
+    upAddClass: "grow",
+    upEndClass: "parallax-comment-box",
+    downAddClass: "shrink",
+    downEndClass: "parallax-comment-box-zero"
+  },
+  comment4: {
+    id: "parallax-4-comment",
+    upAddClass: "grow",
+    upEndClass: "parallax-comment-box",
+    downAddClass: "shrink",
+    downEndClass: "parallax-comment-box-zero"
+  },
+  videoComment: {
+    id: "video-comment-box",
+    upAddClass: "grow",
+    upEndClass: "parallax-comment-box",
+    downAddClass: "shrink",
+    downEndClass: "parallax-comment-box-zero"
+  }
+};
 const spanBoxActor = {
   span1: {
     id: "span-box-1",
@@ -107,7 +161,7 @@ const spanBoxActor = {
     background1: { red: 0, green: 100, blue: 0, opacity: 1 },
     background2: { red: 255, green: 140, blue: 0, opacity: 1 },
     position1: { top: 50, left: 50, bottom: "", right: "" },
-    position2: { top: 0, left: 66.67, bottom: "", right: "" }
+    position2: { top: 0, left: 67, bottom: "", right: "" }
   },
   span4: {
     id: "span-box-4",
@@ -193,6 +247,11 @@ const parallelSlideshowActor = {
 window.onscroll = function() {
   setColor(scrollBoxActor.scroll1, scrollBoxDirector.scroll1);
   setBackgroundColor(scrollBoxActor.scroll1, scrollBoxDirector.scroll1);
+  animateObject(commentBoxActor.comment1, commentBoxDirector.comment1);
+  animateObject(commentBoxActor.comment2, commentBoxDirector.comment2);
+  animateObject(commentBoxActor.comment3, commentBoxDirector.comment3);
+  animateObject(commentBoxActor.comment4, commentBoxDirector.comment4);
+  animateObject(commentBoxActor.videoComment, commentBoxDirector.videoComment);
   setColor(scrollBoxActor.scroll2, scrollBoxDirector.scroll2);
   setBackgroundColor(scrollBoxActor.scroll2, scrollBoxDirector.scroll2);
   setColor(scrollBoxActor.scroll3, scrollBoxDirector.scroll3);

@@ -42,7 +42,7 @@
       and transform properties.
     </div>
     <div class="parallax" id="parallax-1">
-      <div class="parallax-comment-box">
+      <div class="parallax-comment-box-zero" id="parallax-1-comment">
         Design Tip: An indidual element can have a huge visual impact, like this
         water lilly.
       </div>
@@ -52,7 +52,7 @@
       During my visit, every time I turned my head, I caught the site of
       something unexpected. You can do the same with a scrolling parallax
       effect, which is achieved by fixing an element’s background image relative
-      to the viewport.
+      to the viewport. (non-mobile devices only).
     </div>
 
     <div class="sliding-background-container">
@@ -70,7 +70,7 @@
       <!--Experimenting with text within the div-->
       <!--Here positioning it, when the texts extends beyond the vh, the image doesn't "move"-->
       <!--Next week I want the text to scroll with the window. (scroll within a scroll)-->
-      <div class="parallax-comment-box">
+      <div class="parallax-comment-box-zero" id="parallax-2-comment">
         Design Tip: Grouping of elements can create a more dramatic effect, like
         a slideshow of images or a collection of pollinator-friendly plants.
       </div>
@@ -81,20 +81,21 @@
       individually in new combinaitions with each other.
     </div>
     <div class="parallax" id="parallax-3">
-      <div class="parallax-comment-box">
+      <div class="parallax-comment-box-zero" id="parallax-3-comment">
         Design Tip: The repeition of a limited number of colors and effects will
         be far more impactful than incorporating everything under the sun.
       </div>
     </div>
 
     <div class="comment-box">
-      Immediately above and below this box, the code for the classic parallax
-      effect is repeated with only text changes to the "Design Tip" boxes in
-      order to create what appears to be a much bigger parallax effect.
+      On non-mobile devices, the background images above and below this box are
+      coded to produce a classic parallax effect. only nly text changes to the
+      "Design Tip" boxes in order to create what appears to be a much bigger
+      parallax effect.
     </div>
 
     <div class="parallax" id="parallax-4">
-      <div class="parallax-comment-box">
+      <div class="parallax-comment-box-zero" id="parallax-4-comment">
         Design Tip: Effects should support the message, not overwhelm it.
       </div>
     </div>
@@ -102,14 +103,14 @@
     <div class="comment-box">
       Garden and web design constantly change. The introduction of new
       varietals, like the red coneflowers in the image above and the video
-      background in the parallax below, can make the familiar seem new again.
+      background (non-mobile only) below, can make the familiar seem new again.
     </div>
 
-    <div class="video-parallax">
+    <div class="video-parallax" id="video-parallax-box" ->
       <video id="bee-video" autoplay muted loop>
         <source src="./assets/movies/bee-bee-movie.mp4" type="video/mp4" />
       </video>
-      <div class="parallax-comment-box">
+      <div class="parallax-comment-box-zero" id="video-comment-box">
         Design Tip: Garden and code with the users' eperience in mind. Designs
         should attract users like bees to this bee bee tree.
       </div>
@@ -158,8 +159,8 @@
       Progressive Effects: As an element moves between two predefined positions
       on the page, JavaScript is used to enact a gradual change in the CSS
       styling of a second element. The color changes and movements of the
-      squares (above) are progressive effects. This comment box also utilizes
-      progressive effects to change text and background colors.
+      squares (above), and the background-image movement and "Design Tip" box
+      appearnce (below) are all progressive effects.
     </div>
     <div class="parallax-move-background" id="parallax-5">
       <div class="parallax-comment-box" id="cypress-comment-box">
@@ -169,8 +170,8 @@
     </div>
     <div class="comment-box" id="fifth-js-box">
       Of course, in coding and gardening, effects can be combined to create real
-      vibrancy! Below we have a parallax animated slide show with an abrupt
-      message box appearance and disappearence.
+      vibrancy! Below we combine an animated slide show with an abrupt message
+      box appearance and disappearence.
     </div>
     <div class="parallax-slideshow-container" id="conclusion-container">
       <figure id="conclusion-slide-1"></figure>
